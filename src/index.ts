@@ -21,14 +21,17 @@ export function activate(context: ExtensionContext) {
     return
   }
   const filetypes = config.get<Record<string, string>>('filetypes', {})
-  const documentSelector = Object.keys(filetypes)
+  const formatFiletypes = config.get<Record<string, string>>('formatFiletypes', {})
+  const documentSelector = Object.keys({
+    ...filetypes,
+    ...formatFiletypes
+  })
   // no file types enable
   if (documentSelector.length === 0) {
     return
   }
   const linters = config.get<Record<string, string>>('linters', {})
   const formatters = config.get<Record<string, string>>('formatters', {})
-  const formatFiletypes = config.get<Record<string, string>>('formatFiletypes', {})
   const isEnableDebug = config.get<boolean>('debug', false)
   // The server is implemented in node
   let serverModule = require.resolve('diagnostic-languageserver')
