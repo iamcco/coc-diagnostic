@@ -1,0 +1,9 @@
+{
+  "name": "coc-diagnostic",
+  "version": "0.0.1",
+  "description": "diagnostic-languageserver extension for coc.nvim",
+  "main": "./lib/index.js",
+  "repository": "https://github.com/iamcco/coc-diagnostic",
+  "author": "年糕小豆汤 <ooiss@qq.com>",
+  "license": "MIT"
+}
