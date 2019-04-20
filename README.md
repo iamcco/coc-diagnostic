@@ -1,0 +1,67 @@
+# Diagnostic Extension for CoC
+
+> [diagnostic-languageserver](https://github.com/iamcco/diagnostic-languageserver)
+> extension for CoC
+
+## Install
+
+``` vim
+:CocInstall coc-diagnostic
+```
+
+![image](https://user-images.githubusercontent.com/5492542/54487533-15590b80-48d2-11e9-8cba-7e58c0edcf6f.png)
+
+## Config
+
+> `linters` `filetypes` `formatters` `formatFiletypes` field config are same as diagnostic-languageserver.
+> this extension include all linters config at [linters](https://github.com/iamcco/diagnostic-languageserver/wiki/Linters)
+> therefor if you use the linter which have included then you don't need to config
+
+``` jsonc
+"diagnostic-languageserver.enable": {
+  "type": "boolean",
+  "default": true,
+  "description": "enable this extension?"
+},
+"diagnostic-languageserver.debug": {
+  "type": "boolean",
+  "default": true,
+  "description": "enable this extension?"
+},
+"diagnostic-languageserver.trace.server": {
+  "type": "string",
+  "default": "off",
+  "enum": [
+    "off",
+    "messages",
+    "verbose"
+  ],
+  "description": "Trace level of diagnostic-languageserver"
+},
+"diagnostic-languageserver.linters": {
+  "type": "object",
+  "default": {},
+  "description": "linters config same as diagnostic-languageserver's linters config"
+},
+"diagnostic-languageserver.filetypes": {
+  "type": "object",
+  "default": {},
+  "description": "filetypes config same as diagnostic-languageserver's filetypes config"
+},
+"diagnostic-languageserver.formatters": {
+  "type": "object",
+  "default": {},
+  "description": "formatters config same as diagnostic-languageserver's formatters config"
+},
+"diagnostic-languageserver.formatFiletypes": {
+  "type": "object",
+  "default": {},
+  "description": "formatFiletypes config same as diagnostic-languageserver's formatFiletypes config"
+}
+```
+
+### Buy Me A Coffee ☕️
+
+![btc](https://img.shields.io/keybase/btc/iamcco.svg?style=popout-square)
+
+![image](https://user-images.githubusercontent.com/5492542/42771079-962216b0-8958-11e8-81c0-520363ce1059.png)

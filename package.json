@@ -2,8 +2,82 @@
   "name": "coc-diagnostic",
   "version": "0.0.1",
   "description": "diagnostic-languageserver extension for coc.nvim",
+  "keywords": [
+    "coc.nvim",
+    "diagnostic",
+    "linter",
+    "lsp",
+    "format",
+    "neovim",
+    "vim"
+  ],
   "main": "./lib/index.js",
   "repository": "https://github.com/iamcco/coc-diagnostic",
   "author": "年糕小豆汤 <ooiss@qq.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "coc": "^0.0.46"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "diagnostic-languageserver",
+      "properties": {
+        "diagnostic-languageserver.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "enable this extension?"
+        },
+        "diagnostic-languageserver.debug": {
+          "type": "boolean",
+          "default": true,
+          "description": "enable this extension?"
+        },
+        "diagnostic-languageserver.trace.server": {
+          "type": "string",
+          "default": "off",
+          "enum": [
+            "off",
+            "messages",
+            "verbose"
+          ],
+          "description": "Trace level of diagnostic-languageserver"
+        },
+        "diagnostic-languageserver.linters": {
+          "type": "object",
+          "default": {},
+          "description": "linters config same as diagnostic-languageserver's linters config"
+        },
+        "diagnostic-languageserver.filetypes": {
+          "type": "object",
+          "default": {},
+          "description": "filetypes config same as diagnostic-languageserver's filetypes config"
+        },
+        "diagnostic-languageserver.formatters": {
+          "type": "object",
+          "default": {},
+          "description": "formatters config same as diagnostic-languageserver's formatters config"
+        },
+        "diagnostic-languageserver.formatFiletypes": {
+          "type": "object",
+          "default": {},
+          "description": "formatFiletypes config same as diagnostic-languageserver's formatFiletypes config"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "watch": "tsc -w -p ./",
+    "build": "rm -rf ./lib & tsc -p ./"
+  },
+  "devDependencies": {
+    "coc.nvim": "^0.0.65",
+    "typescript": "^3.4.4",
+    "vscode-languageserver-protocol": "3.15.0-next.1"
+  },
+  "dependencies": {
+    "diagnostic-languageserver": "^1.1.9"
+  }
 }
