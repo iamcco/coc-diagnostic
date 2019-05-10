@@ -145,6 +145,56 @@ export const linters = {
       "error": "error",
       "warning": "warning"
     }
+  },
+
+  "mix_credo": {
+    "command": "mix",
+    "debounce": 100,
+    "rootPatterns": ["mix.exs"],
+    "args": ["credo", "suggest", "--format", "flycheck", "--read-from-stdin"],
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "mix_credo",
+    "formatLines": 1,
+    "formatPattern": [
+      "^[^ ]+?:([0-9]+)(:([0-9]+))?:\\s+([^ ]+):\\s+(.*)$",
+      {
+        "line": 1,
+        "column": 3,
+        "message": 5,
+        "security": 4
+      }
+    ],
+    "securities": {
+      "E": "error",
+      "W": "warning",
+      "D": "info",
+      "R": "info",
+      "F": "info"
+    }
+  },
+
+  "mix_credo_complie": {
+    "command": "mix",
+    "debounce": 100,
+    "rootPatterns": ["mix.exs"],
+    "args": ["credo", "suggest", "--format", "flycheck", "--read-from-stdin"],
+    "offsetLine": -1,
+    "offsetColumn": 0,
+    "sourceName": "mix_credo",
+    "formatLines": 1,
+    "formatPattern": [
+      "^([^ ]+)\\s+\\(([^)]+)\\)\\s+([^ ]+?):([0-9]+):\\s+(.*)$",
+      {
+        "line": -1,
+        "column": -1,
+        "message": ["[", 2, "]: ", 3, ": ", 5],
+        "security": 1
+      }
+    ],
+    "securities": {
+      "**": "error"
+    }
   }
 }
 
@@ -152,5 +202,10 @@ export const formatters = {
   "dartfmt": {
     "command": "dartfmt",
     "args": [ "--fix" ]
+  },
+
+  "mix_format": {
+    "command": "mix",
+    "args": ["format", "-"],
   }
 }

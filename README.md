@@ -15,7 +15,36 @@
 
 > `linters` `filetypes` `formatters` `formatFiletypes` field config are same as diagnostic-languageserver.
 > this extension include all linters config at [linters](https://github.com/iamcco/diagnostic-languageserver/wiki/Linters)
-> therefor if you use the linter which have included then you don't need to config
+> therefor if you use the linter which have included then you don't need to config linters and formatters
+
+**To enable this plugin for filetypes** you have to config `diagnostic-languageserver.filetypes`
+for linters and `diagnostic-languageserver.formatFiletypes` for formatters.
+
+example coc-settings.json:
+
+``` jsonc
+{
+  // diagnostic-languageserver
+  "diagnostic-languageserver.filetypes": {
+    "vim": "vint",
+    "email": "languagetool",
+    "markdown": [ "write-good", "markdownlint" ],
+    "sh": "shellcheck",
+    "elixir": ["mix_credo", "mix_credo_complie"],
+    "eelixir": ["mix_credo", "mix_credo_complie"],
+    "php": "phpcs"
+    ...
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+    "dart": "dartfmt",
+    "elixir": "mix_format",
+    "eelixir": "mix_format"
+    ...
+  }
+}
+```
+
+**All Options:**
 
 ``` jsonc
 "diagnostic-languageserver.enable": {
