@@ -166,11 +166,10 @@ export const linters = {
       }
     ],
     "securities": {
-      "E": "error",
-      "W": "warning",
+      "F": "warning",
+      "C": "warning",
       "D": "info",
-      "R": "info",
-      "F": "info"
+      "R": "info"
     }
   },
 
