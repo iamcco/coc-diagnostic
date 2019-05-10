@@ -94,9 +94,9 @@ debug@^4.1.1:
   dependencies:
     ms "^2.1.1"
 
-diagnostic-languageserver@^1.1.9:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/diagnostic-languageserver/-/diagnostic-languageserver-1.1.9.tgz#686ae457535f0bbbd44b19e075ce2fd4e58d82b4"
+diagnostic-languageserver@^1.1.11:
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/diagnostic-languageserver/-/diagnostic-languageserver-1.1.11.tgz#1f2252b1efed3cb065f37db9c8d77e82b2bf3b91"
   dependencies:
     findup "^0.1.5"
     rxjs "^6.4.0"
