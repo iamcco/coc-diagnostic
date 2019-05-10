@@ -30,8 +30,8 @@ example coc-settings.json:
     "email": "languagetool",
     "markdown": [ "write-good", "markdownlint" ],
     "sh": "shellcheck",
-    "elixir": ["mix_credo", "mix_credo_complie"],
-    "eelixir": ["mix_credo", "mix_credo_complie"],
+    "elixir": ["mix_credo", "mix_credo_compile"],
+    "eelixir": ["mix_credo", "mix_credo_compile"],
     "php": "phpcs"
     ...
   },

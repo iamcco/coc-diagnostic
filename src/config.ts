@@ -174,7 +174,7 @@ export const linters = {
     }
   },
 
-  "mix_credo_complie": {
+  "mix_credo_compile": {
     "command": "mix",
     "debounce": 100,
     "rootPatterns": ["mix.exs"],
