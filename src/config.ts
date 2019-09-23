@@ -194,6 +194,53 @@ export const linters = {
     "securities": {
       "**": "error"
     }
+  },
+
+  "stylelint": {
+    "command": "./node_modules/.bin/stylelint",
+    "rootPatterns": [".git"],
+    "isStdout": true,
+    "isStderr": false,
+    "debounce": 100,
+    "args": ["--formatter",  "unix"],
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "stylelint",
+    "formatLines": 1,
+    "formatPattern": [
+      "^[^:]+:(\\d+):(\\d+):\\s(.+)\\s\\[(\\w+)\\]$",
+      {
+        "line": 1,
+        "column": 2,
+        "message": 3,
+        "security": 4
+      }
+    ],
+    "securities": {
+      "error": "error",
+      "warning": "warning"
+    }
+  },
+
+  "standard": {
+    "command": "./node_modules/.bin/standard",
+    "isStderr": false,
+    "isStdout": true,
+    "args": ["--stdin", "--verbose"],
+    "rootPatterns": [".git"],
+    "debounce": 100,
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "standard",
+    "formatLines": 1,
+    "formatPattern": [
+      "^\\s*<\\w+>:(\\d+):(\\d+):\\s+(.*)$",
+      {
+        "line": 1,
+        "column": 2,
+        "message": 3
+      }
+    ]
   }
 }
 
@@ -206,5 +253,21 @@ export const formatters = {
   "mix_format": {
     "command": "mix",
     "args": ["format", "-"],
+  },
+
+  "stylelint": {
+    "command": "./node_modules/.bin/stylelint",
+    "args": ["--fix"],
+    "rootPatterns": [".git"],
+    "isStderr": false,
+    "isStdout": true
+  },
+
+  "standard": {
+    "command": "./node_modules/.bin/standard",
+    "args": ["--stdin", "--fix"],
+    "rootPatterns": [".git"],
+    "isStderr": false,
+    "isStdout": true
   }
 }
