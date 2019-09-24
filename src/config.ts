@@ -202,7 +202,12 @@ export const linters = {
     "isStdout": true,
     "isStderr": false,
     "debounce": 100,
-    "args": ["--formatter",  "unix"],
+    "args": [
+      "--formatter",
+      "unix",
+      "--stdin-filename",
+      "%filename"
+    ],
     "offsetLine": 0,
     "offsetColumn": 0,
     "sourceName": "stylelint",
