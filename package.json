@@ -1,6 +1,6 @@
 {
   "name": "coc-diagnostic",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "diagnostic-languageserver extension for coc.nvim",
   "keywords": [
     "coc.nvim",
@@ -11,7 +11,7 @@
     "neovim",
     "vim"
   ],
-  "main": "./lib/index.js",
+  "main": "./out/index.js",
   "repository": "https://github.com/iamcco/coc-diagnostic",
   "author": "年糕小豆汤 <ooiss@qq.com>",
   "license": "MIT",
@@ -70,14 +70,15 @@
   },
   "scripts": {
     "watch": "tsc -w -p ./",
-    "build": "rm -rf ./lib & tsc -p ./"
+    "build": "rm -rf ./out && webpack"
   },
   "devDependencies": {
     "@types/node": "^12.0.0",
     "coc.nvim": "^0.0.73",
-    "typescript": "^3.4.4"
-  },
-  "dependencies": {
+    "ts-loader": "^6.2.0",
+    "typescript": "^3.4.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
     "diagnostic-languageserver": "^1.2.2"
   }
 }

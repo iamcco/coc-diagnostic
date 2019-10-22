@@ -1,3 +1,4 @@
+import {resolve} from 'path';
 import {
   ExtensionContext,
   LanguageClient,
@@ -34,7 +35,7 @@ export function activate(context: ExtensionContext) {
   const formatters = config.get<Record<string, string>>('formatters', {})
   const isEnableDebug = config.get<boolean>('debug', false)
   // The server is implemented in node
-  let serverModule = require.resolve('diagnostic-languageserver')
+  let serverModule = resolve(context.extensionPath, 'out', 'server')
 
   // If the extension is launched in debug mode then the debug server options are used
   // Otherwise the run options are used
