@@ -7,7 +7,7 @@ module.exports = {
     server: './src/server.ts'
   },
   target: 'node',
-  mode: 'none',
+  mode: 'production',
   resolve: {
     mainFields: ['module', 'main'],
     extensions: ['.js', '.ts']
