@@ -865,12 +865,13 @@ detect-libc@^1.0.2:
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
   integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
 
-diagnostic-languageserver@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/diagnostic-languageserver/-/diagnostic-languageserver-1.2.2.tgz#21b7785f580a1216514c9c3fbe3f2b371a78cf2f"
-  integrity sha512-RXFqLy4uhJipA4Z0I1UvqaplW9yGXf2sKdrQqwWf/DXoP0P7Qf+krLIUG9Bz0jnQLgwNfkbShqTzzxWzSL9scw==
+diagnostic-languageserver@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/diagnostic-languageserver/-/diagnostic-languageserver-1.4.2.tgz#40cb05154b91bb1bcb0785b92c18c14d111de5ff"
+  integrity sha512-qdEppfS73LJvm4IU/jHBxV8OIV+LunxW0qua2yPT4pd4PYehIrzscRrKIAsGlEmXRahLIcH82/T/fCI25DoUQA==
   dependencies:
     findup "^0.1.5"
+    lodash "^4.17.15"
     rxjs "^6.4.0"
     tslib "^1.9.3"
     vscode-languageserver "^5.3.0-next.1"
@@ -1727,6 +1728,11 @@ locate-path@^3.0.0:
 lodash@^4.17.14:
   version "4.17.14"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
+
+lodash@^4.17.15:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
 log4js@^4.5.1:
   version "4.5.1"

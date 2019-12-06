@@ -3,50 +3,56 @@
  */
 export const linters = {
   "eslint": {
-    "command": "./node_modules/.bin/eslint",   // this will find local eslint first, if local eslint not found, it will use global eslint
-    "rootPatterns": [".git"],
-    "debounce": 100,
-    "args": [ "--stdin", "--no-color" ],
-    "offsetLine": 0,
-    "offsetColumn": 0,
-    "sourceName": "eslint",
-    "formatLines": 1,
-    "formatPattern": [
-      "^\\s*(\\d+):(\\d+)\\s+([^ ]+)\\s+(.*?)\\s+([^ ]+)$",
-      {
-        "line": 1,
-        "column": 2,
-        "message": [4, " [", 5, "]" ],
-        "security": 3
-      }
+    "command": "./node_modules/.bin/eslint",  // this will find local eslint first, if local eslint not found, it
+    "rootPatterns": [
+      ".git"
     ],
+    "debounce": 100,
+    "args": [
+      "--stdin",
+      "--stdin-filename",
+      "%filepath",
+      "--format",
+      "json"
+    ],
+    "sourceName": "eslint",
+    "parseJson": {
+      "errorsRoot": "[0].messages",
+      "line": "line",
+      "column": "column",
+      "endLine": "endLine",
+      "endColumn": "endColumn",
+      "message": "${message} [${ruleId}]",
+      "security": "severity"
+    },
     "securities": {
-      "error": "error",
-      "warning": "warning"
+      "2": "error",
+      "1": "warning"
     }
   },
 
   "shellcheck": {
     "command": "shellcheck",
     "debounce": 100,
-    "args": [ "--format=gcc", "-"],
-    "offsetLine": 0,
-    "offsetColumn": 0,
-    "sourceName": "shellcheck",
-    "formatLines": 1,
-    "formatPattern": [
-      "^[^:]+:(\\d+):(\\d+):\\s+([^:]+):\\s+(.*)$",
-      {
-        "line": 1,
-        "column": 2,
-        "message": 4,
-        "security": 3
-      }
+    "args": [
+      "--format",
+      "json",
+      "-"
     ],
+    "sourceName": "shellcheck",
+    "parseJson": {
+      "line": "line",
+      "column": "column",
+      "endLine": "endLine",
+      "endColumn": "endColumn",
+      "message": "${message} [${code}]",
+      "security": "level"
+    },
     "securities": {
       "error": "error",
       "warning": "warning",
-      "note": "info"
+      "info": "info",
+      "style": "hint"
     }
   },
 
@@ -198,29 +204,24 @@ export const linters = {
 
   "stylelint": {
     "command": "./node_modules/.bin/stylelint",
-    "rootPatterns": [".git"],
-    "isStdout": true,
-    "isStderr": false,
+    "rootPatterns": [
+      ".git"
+    ],
     "debounce": 100,
     "args": [
       "--formatter",
-      "unix",
+      "json",
       "--stdin-filename",
-      "%filename"
+      "%filepath"
     ],
-    "offsetLine": 0,
-    "offsetColumn": 0,
     "sourceName": "stylelint",
-    "formatLines": 1,
-    "formatPattern": [
-      "^[^:]+:(\\d+):(\\d+):\\s(.+)\\s\\[(\\w+)\\]$",
-      {
-        "line": 1,
-        "column": 2,
-        "message": 3,
-        "security": 4
-      }
-    ],
+    "parseJson": {
+      "errorsRoot": "[0].warnings",
+      "line": "line",
+      "column": "column",
+      "message": "${text}",
+      "security": "severity"
+    },
     "securities": {
       "error": "error",
       "warning": "warning"
