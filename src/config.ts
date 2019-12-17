@@ -247,6 +247,28 @@ export const linters = {
         "message": 3
       }
     ]
+  },
+
+  "hadolint": {
+    "command": "hadolint",
+    "sourceName": "hadolint",
+    "args": [
+      "-f",
+      "json",
+      "-"
+    ],
+    "parseJson": {
+      "line": "line",
+      "column": "column",
+      "security": "level",
+      "message": "${message} [${code}]"
+    },
+    "securities": {
+      "error": "error",
+      "warning": "warning",
+      "info": "info",
+      "style": "hint"
+    }
   }
 }
 
