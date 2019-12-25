@@ -269,7 +269,21 @@ export const linters = {
       "info": "info",
       "style": "hint"
     }
-  }
+  },
+
+  "golangci-lint": {
+    "command": "golangci-lint",
+    "rootPatterns": [ ".git", "go.mod" ],
+    "debounce": 100,
+    "args": [ "run", "--out-format", "json", "%file" ],
+    "sourceName": "golangci-lint",
+    "parseJson": {
+      "errorsRoot": "Issues",
+      "line": "Pos.Line",
+      "column": "Pos.Column",
+      "message": "${Text} [${FromLinter}]",
+    },
+  },
 }
 
 export const formatters = {
