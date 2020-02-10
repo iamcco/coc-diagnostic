@@ -865,15 +865,15 @@ detect-libc@^1.0.2:
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
   integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
 
-diagnostic-languageserver@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/diagnostic-languageserver/-/diagnostic-languageserver-1.4.2.tgz#40cb05154b91bb1bcb0785b92c18c14d111de5ff"
-  integrity sha512-qdEppfS73LJvm4IU/jHBxV8OIV+LunxW0qua2yPT4pd4PYehIrzscRrKIAsGlEmXRahLIcH82/T/fCI25DoUQA==
+diagnostic-languageserver@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/diagnostic-languageserver/-/diagnostic-languageserver-1.4.3.tgz#add39372844aad4792479eeaaa10fee8391cc4cd"
+  integrity sha512-UQfs+mvMSPxnePuQ24a4WSwSopLy4KUgwT2rfkMb2MgxqG1Fd33BGvvEDvXhgisU7SmW9E80DV9MiurKHbzPRg==
   dependencies:
     findup "^0.1.5"
     lodash "^4.17.15"
     rxjs "^6.4.0"
-    tslib "^1.9.3"
+    tslib "^1.10.0"
     vscode-languageserver "^5.3.0-next.1"
     vscode-uri "^1.0.6"
 
@@ -2985,7 +2985,7 @@ ts-loader@^6.2.0:
     micromatch "^4.0.0"
     semver "^6.0.0"
 
-tslib@^1.10.0, tslib@^1.9.3:
+tslib@^1.10.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
 
