@@ -83,7 +83,7 @@ export const linters = {
     "sourceName": "vint",
     "formatLines": 1,
     "formatPattern": [
-      "[^:]+:(\\d+):(\\d+):\\s*(.*$)",
+      "[^:]+:(\\d+):(\\d+):\\s*(.*)(\\r|\\n)*$",
       {
         "line": 1,
         "column": 2,
@@ -101,7 +101,7 @@ export const linters = {
     "sourceName": "languagetool",
     "formatLines": 2,
     "formatPattern": [
-      "^\\d+?\\.\\)\\s+Line\\s+(\\d+),\\s+column\\s+(\\d+),\\s+([^\\n]+)\nMessage:\\s+(.*)$",
+      "^\\d+?\\.\\)\\s+Line\\s+(\\d+),\\s+column\\s+(\\d+),\\s+([^\\n]+)\nMessage:\\s+(.*)(\\r|\\n)*$",
       {
         "line": 1,
         "column": 2,
@@ -120,7 +120,7 @@ export const linters = {
     "sourceName": "markdownlint",
     "formatLines": 1,
     "formatPattern": [
-      "^.*?:\\s+(\\d+):\\s+(.*)$",
+      "^.*?:\\s+(\\d+):\\s+(.*)(\\r|\\n)*$",
       {
         "line": 1,
         "column": -1,
@@ -139,7 +139,7 @@ export const linters = {
     "sourceName": "phpcs",
     "formatLines": 1,
     "formatPattern": [
-      "^.*:(\\d+):(\\d+):\\s+(.*)\\s+-\\s+(.*)$",
+      "^.*:(\\d+):(\\d+):\\s+(.*)\\s+-\\s+(.*)(\\r|\\n)*$",
       {
         "line": 1,
         "column": 2,
@@ -163,7 +163,7 @@ export const linters = {
     "sourceName": "mix_credo",
     "formatLines": 1,
     "formatPattern": [
-      "^[^ ]+?:([0-9]+)(:([0-9]+))?:\\s+([^ ]+):\\s+(.*)$",
+      "^[^ ]+?:([0-9]+)(:([0-9]+))?:\\s+([^ ]+):\\s+(.*)(\\r|\\n)*$",
       {
         "line": 1,
         "column": 3,
@@ -189,7 +189,7 @@ export const linters = {
     "sourceName": "mix_credo",
     "formatLines": 1,
     "formatPattern": [
-      "^([^ ]+)\\s+\\(([^)]+)\\)\\s+([^ ]+?):([0-9]+):\\s+(.*)$",
+      "^([^ ]+)\\s+\\(([^)]+)\\)\\s+([^ ]+?):([0-9]+):\\s+(.*)(\\r|\\n)*$",
       {
         "line": -1,
         "column": -1,
@@ -240,7 +240,7 @@ export const linters = {
     "sourceName": "standard",
     "formatLines": 1,
     "formatPattern": [
-      "^\\s*<\\w+>:(\\d+):(\\d+):\\s+(.*)$",
+      "^\\s*<\\w+>:(\\d+):(\\d+):\\s+(.*)(\\r|\\n)*$",
       {
         "line": 1,
         "column": 2,
@@ -295,13 +295,40 @@ export const linters = {
     "sourceName": "phpstan",
     "formatLines": 1,
     "formatPattern": [
-      "^[^:]+:(\\d+):(.*)$",
+      "^[^:]+:(\\d+):(.*)(\\r|\\n)*$",
       {
         "line": 1,
         "message": 2,
       },
     ],
   },
+
+  "tidy": {
+    "command": "tidy",
+    "args": ["-e", "-q"],
+    "rootPatterns": [".git/"],
+    "isStderr": true,
+    "debounce": 100,
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "tidy",
+    "formatLines": 1,
+    "formatPattern": [
+      "^.*?(\\d+).*?(\\d+)\\s+-\\s+([^:]+):\\s+(.*)(\\r|\\n)*$",
+      {
+        "line": 1,
+        "column": 2,
+        "endLine": 1,
+        "endColumn": 2,
+        "message": [4],
+        "security": 3
+      }
+    ],
+    "securities": {
+      "Error": "error",
+      "Warning": "warning"
+    }
+  }
 }
 
 export const formatters = {
