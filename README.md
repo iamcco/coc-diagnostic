@@ -32,7 +32,7 @@ example coc-settings.json:
     "sh": "shellcheck",
     "elixir": ["mix_credo", "mix_credo_compile"],
     "eelixir": ["mix_credo", "mix_credo_compile"],
-    "php": "phpstan"
+    "php": ["phpstan", "psalm"],
     ...
   },
   "diagnostic-languageserver.formatFiletypes": {
