@@ -303,6 +303,31 @@ export const linters = {
     ],
   },
 
+  "psalm": {
+    "command": "./vendor/bin/psalm",
+    "debounce": 100,
+    "rootPatterns": ["composer.json", "composer.lock", "vendor", ".git"],
+    "args": ["--output-format=emacs", "--no-progress"],
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "psalm",
+    "formatLines": 1,
+    "formatPattern": [
+      "^[^:]+:(\\d):(\\d):(.*)\\s-\\s(.*)(\\r|\\n)*$",
+      {
+        "line": 1,
+        "column": 2,
+        "message": 4,
+        "security": 3
+      }
+    ],
+    "securities": {
+      "error": "error",
+      "warning": "warning"
+    },
+    "requiredFiles": ["psalm.xml"]
+  },
+
   "tidy": {
     "command": "tidy",
     "args": ["-e", "-q"],
