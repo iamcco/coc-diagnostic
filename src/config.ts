@@ -272,18 +272,21 @@ export const linters = {
   },
 
   "golangci-lint": {
-    "command": "golangci-lint",
+    "command": "bash",
     "rootPatterns": [ ".git", "go.mod" ],
     "debounce": 100,
-    "args": [ "run", "--out-format", "json", "%file" ],
+    "args": [ "-c", "golangci-lint run --fast | grep %filename"],
     "sourceName": "golangci-lint",
-    "parseJson": {
-      "errorsRoot": "Issues",
-      "line": "Pos.Line",
-      "column": "Pos.Column",
-      "message": "${Text} [${FromLinter}]",
-    },
-  },
+    "formatPattern": [
+      "^[^:]+:(\\d+):(\\d+):\\s+(.*)$",
+      {
+        "line": 1,
+        "column": 2,
+        "message": [3]
+      }
+    ]
+  }
+
 
   "phpstan": {
     "command": "./vendor/bin/phpstan",
