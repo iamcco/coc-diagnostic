@@ -13,6 +13,10 @@
 
 ## Config
 
+**NOTE**: If you want to support linter that do not include by default,
+you should read the [README](https://github.com/iamcco/diagnostic-languageserver#how-to-config-a-new-linter)
+for how to config a new linter.
+
 > `linters` `filetypes` `formatters` `formatFiletypes` field config are same as diagnostic-languageserver.
 > this extension include all linters config at [linters](https://github.com/iamcco/diagnostic-languageserver/wiki/Linters)
 > therefor if you use the linter which have included then you don't need to config linters and formatters
