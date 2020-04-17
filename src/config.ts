@@ -285,6 +285,22 @@ export const linters = {
     },
   },
 
+  "revive": {
+    "command": "revive",
+    "rootPatterns": [ ".git", "go.mod" ],
+    "debounce": 100,
+    "args": [ "%file" ],
+    "sourceName": "revive",
+    "formatPattern": [
+      "^[^:]+:(\\d+):(\\d+):\\s+(.*)$",
+      {
+        "line": 1,
+        "column": 2,
+        "message": [3]
+      }
+    ]
+  },
+
   "phpstan": {
     "command": "./vendor/bin/phpstan",
     "debounce": 100,
