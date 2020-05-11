@@ -70,7 +70,8 @@
   },
   "scripts": {
     "watch": "tsc -w -p ./",
-    "build": "rm -rf ./out && webpack"
+    "build": "rm -rf ./out && webpack",
+    "prepare": "build"
   },
   "devDependencies": {
     "@types/node": "^12.0.0",
