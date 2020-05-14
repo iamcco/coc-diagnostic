@@ -865,10 +865,10 @@ detect-libc@^1.0.2:
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
   integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
 
-diagnostic-languageserver@^1.4.6:
-  version "1.4.6"
-  resolved "https://registry.yarnpkg.com/diagnostic-languageserver/-/diagnostic-languageserver-1.4.6.tgz#9930d763f8e6fa1e018992ce228dcd747244f4d9"
-  integrity sha512-IuanSFGusPiR14PAlNJFIwWIn0PRlnkXr/ufi2eHDWe+d8q0m/VCOOM+mt8o4A1rr8mQqnM8ZZV0kx4GtzyPPg==
+diagnostic-languageserver@^1.4.7:
+  version "1.4.7"
+  resolved "https://registry.yarnpkg.com/diagnostic-languageserver/-/diagnostic-languageserver-1.4.7.tgz#c0e25fbd0145209c4d3b7af5a26ebe324aade64b"
+  integrity sha512-BEyNVSHaVpLjkuEJRla8KN1R7K6vx5G9AGJ+5CgVmNEkorvdHmnyXZbGFtBVBZqwZPWj3wzoqdKUESk3UMrb2A==
   dependencies:
     find-up "^4.1.0"
     lodash "^4.17.15"
