@@ -397,5 +397,10 @@ export const formatters = {
     "rootPatterns": [".git"],
     "isStderr": false,
     "isStdout": true
+  },
+
+  "lua-format": {
+    "command": "lua-format",
+    "args": ["-i"]
   }
 }
