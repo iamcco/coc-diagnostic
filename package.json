@@ -1,6 +1,6 @@
 {
   "name": "coc-diagnostic",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "diagnostic-languageserver extension for coc.nvim",
   "keywords": [
     "coc.nvim",
@@ -77,7 +77,7 @@
   "devDependencies": {
     "@types/node": "^12.0.0",
     "coc.nvim": "^0.0.77",
-    "diagnostic-languageserver": "^1.4.7",
+    "diagnostic-languageserver": "^1.6.0",
     "npm-run-all": "^4.1.5",
     "ts-loader": "^7.0.4",
     "typescript": "^3.9.2",

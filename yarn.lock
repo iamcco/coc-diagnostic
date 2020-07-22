@@ -638,6 +638,11 @@ commander@^2.20.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
+commander@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-5.1.0.tgz#46abbd1652f8e059bddaef99bbdcb2ad9cf179ae"
+  integrity sha512-P0CysNDQ7rtVw4QIQtm+MRxV66vKFSvlsQvGYXZWR3qFU0jlMKHZZZgw8e+8DSah4UDKMqnknRDQz+xuQXQ/Zg==
+
 commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
@@ -865,11 +870,12 @@ detect-libc@^1.0.2:
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
   integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
 
-diagnostic-languageserver@^1.4.7:
-  version "1.4.7"
-  resolved "https://registry.yarnpkg.com/diagnostic-languageserver/-/diagnostic-languageserver-1.4.7.tgz#c0e25fbd0145209c4d3b7af5a26ebe324aade64b"
-  integrity sha512-BEyNVSHaVpLjkuEJRla8KN1R7K6vx5G9AGJ+5CgVmNEkorvdHmnyXZbGFtBVBZqwZPWj3wzoqdKUESk3UMrb2A==
+diagnostic-languageserver@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/diagnostic-languageserver/-/diagnostic-languageserver-1.6.0.tgz#06771a61c62aedcbf671d1a3931c428b13acfbf8"
+  integrity sha512-VM8Set15I8tVVSezNQaysW4h4qBUkOypV5kjaKO52qOaj0APrOvNXRXFjM1GmcQkAHz0jRWD5edfEyACTxqvfQ==
   dependencies:
+    commander "^5.1.0"
     find-up "^4.1.0"
     lodash "^4.17.15"
     rxjs "^6.5.5"
