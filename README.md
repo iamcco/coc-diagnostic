@@ -42,7 +42,8 @@ example coc-settings.json:
   "diagnostic-languageserver.formatFiletypes": {
     "dart": "dartfmt",
     "elixir": "mix_format",
-    "eelixir": "mix_format"
+    "eelixir": "mix_format",
+    "lua": "lua-format",
     ...
   }
 }
