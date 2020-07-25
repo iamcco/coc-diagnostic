@@ -402,5 +402,9 @@ export const formatters = {
   "lua-format": {
     "command": "lua-format",
     "args": ["-i"]
+  },
+
+  "shfmt": {
+    "command": "shfmt"
   }
 }

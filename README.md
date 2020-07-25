@@ -44,6 +44,7 @@ example coc-settings.json:
     "elixir": "mix_format",
     "eelixir": "mix_format",
     "lua": "lua-format",
+    "sh": "shfmt",
     ...
   }
 }
