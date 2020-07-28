@@ -406,5 +406,10 @@ export const formatters = {
 
   "shfmt": {
     "command": "shfmt"
+  },
+  
+  "tffmt": {
+    "command": "terraform",
+    "args": ["fmt", "-"]
   }
 }
