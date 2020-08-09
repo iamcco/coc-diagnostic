@@ -407,9 +407,14 @@ export const formatters = {
   "shfmt": {
     "command": "shfmt"
   },
-  
+
   "tffmt": {
     "command": "terraform",
     "args": ["fmt", "-"]
+  },
+
+  "blade-formatter": {
+    "command": "blade-formatter",
+    "args": ["--stdin"]
   }
 }
