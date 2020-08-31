@@ -275,9 +275,11 @@ export const linters = {
     "command": "golangci-lint",
     "rootPatterns": [ ".git", "go.mod" ],
     "debounce": 100,
-    "args": [ "run", "--out-format", "json", "%file" ],
+    "args": [ "run", "--out-format", "json" ],
     "sourceName": "golangci-lint",
     "parseJson": {
+      "sourceName": "Pos.Filename",
+      "sourceNameFilter": true,
       "errorsRoot": "Issues",
       "line": "Pos.Line",
       "column": "Pos.Column",
