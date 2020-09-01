@@ -870,10 +870,10 @@ detect-libc@^1.0.2:
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
   integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
 
-diagnostic-languageserver@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/diagnostic-languageserver/-/diagnostic-languageserver-1.7.0.tgz#1d00b013ad0157f0a5303a67be48a10915198dc2"
-  integrity sha512-7CNLmxPkpZFM/3cmcEHvU48Wo4Hs6CoWvbjFlnqYiJyNLN7Di4fyU1IALtkO0QDv4OexRf8JteqIdjU1EjQVHQ==
+diagnostic-languageserver@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/diagnostic-languageserver/-/diagnostic-languageserver-1.7.1.tgz#f733eafdfb75ed48dba2073359ba46b8584cc24d"
+  integrity sha512-iq4RE35kISxPucmRfZhpIJr9xWi2EOGraD4rX0/5Tk3dIUbsLHeUzX5eVQeVL7Kw4QiBsbMO4W2TgV18VyiUYA==
   dependencies:
     commander "^5.1.0"
     find-up "^4.1.0"
