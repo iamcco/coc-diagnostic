@@ -1,6 +1,6 @@
 {
   "name": "coc-diagnostic",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "diagnostic-languageserver extension for coc.nvim",
   "keywords": [
     "coc.nvim",
@@ -33,7 +33,7 @@
         "diagnostic-languageserver.debug": {
           "type": "boolean",
           "default": false,
-          "description": "enable this extension?"
+          "description": "enable debug?"
         },
         "diagnostic-languageserver.trace.server": {
           "type": "string",

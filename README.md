@@ -62,7 +62,7 @@ example coc-settings.json:
 "diagnostic-languageserver.debug": {
   "type": "boolean",
   "default": true,
-  "description": "enable this extension?"
+  "description": "enable debug?"
 },
 "diagnostic-languageserver.trace.server": {
   "type": "string",
