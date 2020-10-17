@@ -14,6 +14,8 @@ import {
   formatters as defaultFormatters
 } from './config';
 
+import * as _ from "lodash";
+
 export function activate(context: ExtensionContext) {
   const config = workspace.getConfiguration('diagnostic-languageserver')
   const isEnable = config.get<boolean>('enable', true)
@@ -66,15 +68,9 @@ export function activate(context: ExtensionContext) {
     documentSelector,
 
     initializationOptions: {
-      linters: {
-        ...defaultLinters,
-        ...linters
-      },
+      linters: _.merge(_.cloneDeep(defaultLinters), linters),
       filetypes,
-      formatters: {
-        ...defaultFormatters,
-        ...formatters
-      },
+      formatters: _.merge(_.cloneDeep(defaultFormatters), formatters),
       formatFiletypes
     }
   }
