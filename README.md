@@ -21,6 +21,10 @@ for how to config a new linter.
 > this extension include all linters config at [linters](https://github.com/iamcco/diagnostic-languageserver/wiki/Linters)
 > therefor if you use the linter which have included then you don't need to config linters and formatters
 
+Any configuration for `linters` and `formatters` is merged with [the default
+configuration](./src/config.ts), this allow overriding specific parts of the
+configuration only.
+
 **To enable this plugin for filetypes** you have to config `diagnostic-languageserver.filetypes`
 for linters and `diagnostic-languageserver.formatFiletypes` for formatters.
 
