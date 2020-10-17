@@ -371,6 +371,19 @@ export const linters = {
       "Error": "error",
       "Warning": "warning"
     }
+  },
+
+  "nix-linter": {
+    "command": "nix-linter",
+    "sourceName": "nix-linter"
+    "debounce": 100,
+    "parseJson": {
+      "line": "pos.spanBegin.sourceLine",
+      "column": "pos.spanBegin.sourceColumn",
+      "endLine": "pos.spanEnd.sourceLine",
+      "endColumn": "pos.spanEnd.sourceColumn",
+      "message": "${description}"
+    },
   }
 }
 
