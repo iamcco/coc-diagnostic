@@ -375,7 +375,7 @@ export const linters = {
 
   "nix-linter": {
     "command": "nix-linter",
-    "sourceName": "nix-linter"
+    "sourceName": "nix-linter",
     "debounce": 100,
     "parseJson": {
       "line": "pos.spanBegin.sourceLine",
