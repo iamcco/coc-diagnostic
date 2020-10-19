@@ -36,6 +36,8 @@ export function activate(context: ExtensionContext) {
   const linters = config.get<Record<string, string>>('linters', {})
   const formatters = config.get<Record<string, string>>('formatters', {})
   const isEnableDebug = config.get<boolean>('debug', false)
+  const mergeConfig = config.get<boolean>('mergeConfig', false)
+  const merge = (a, b) => mergeConfig ? _.merge({}, a, b) : { ...a, ...b };
   // The server is implemented in node
   let serverModule = resolve(context.extensionPath, 'out', 'server')
 
@@ -68,9 +70,9 @@ export function activate(context: ExtensionContext) {
     documentSelector,
 
     initializationOptions: {
-      linters: _.merge(_.cloneDeep(defaultLinters), linters),
+      linters: merge(defaultLinters, linters),
       filetypes,
-      formatters: _.merge(_.cloneDeep(defaultFormatters), formatters),
+      formatters: merge(defaultFormatters, formatters),
       formatFiletypes
     }
   }
