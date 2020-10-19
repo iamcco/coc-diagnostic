@@ -384,6 +384,9 @@ export const linters = {
       "endColumn": "pos.spanEnd.sourceColumn",
       "message": "${description}"
     },
+    "securities": {
+      "undefined": "warning"
+    }
   }
 }
 
