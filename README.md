@@ -21,7 +21,8 @@ for how to config a new linter.
 > this extension include all linters config at [linters](https://github.com/iamcco/diagnostic-languageserver/wiki/Linters)
 > therefor if you use the linter which have included then you don't need to config linters and formatters
 
-Any configuration for `linters` and `formatters` is merged with [the default
+If `mergeConfig` is `true` (default `false`) then any configuration for
+`linters` and `formatters` is merged with [the default
 configuration](./src/config.ts), this allow overriding specific parts of the
 configuration only.
 
