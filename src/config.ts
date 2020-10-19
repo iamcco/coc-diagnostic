@@ -434,5 +434,9 @@ export const formatters = {
   "blade-formatter": {
     "command": "blade-formatter",
     "args": ["--stdin"]
+  },
+
+  "nixfmt": {
+    "command": "nixfmt"
   }
 }
