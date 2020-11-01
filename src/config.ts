@@ -387,6 +387,29 @@ export const linters = {
     "securities": {
       "undefined": "warning"
     }
+  },
+  "yamllint": {
+    "args": [ "-f", "parsable", "-" ],
+    "command": "yamllint",
+    "debounce": 100,
+    "formatLines": 1,
+    "formatPattern": [
+      "^.*?:(\\d+):(\\d+): \\[(.*?)] (.*) \\((.*)\\)",
+      {
+        "line": 1,
+        "endline": 1,
+        "column": 2,
+        "endColumn": 2,
+        "message": 4,
+        "code": 5,
+        "security": 3
+      }
+    ],
+    "securities": {
+      "error": "error",
+      "warning": "warning"
+    },
+    "sourceName": "yamllint"
   }
 }
 
