@@ -461,5 +461,9 @@ export const formatters = {
 
   "nixfmt": {
     "command": "nixfmt"
+  },
+
+  "fish_indent": {
+    "command": "fish_indent"
   }
 }
