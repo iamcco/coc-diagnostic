@@ -36,6 +36,7 @@ export function activate(context: ExtensionContext) {
   const linters = config.get<Record<string, string>>('linters', {})
   const formatters = config.get<Record<string, string>>('formatters', {})
   const isEnableDebug = config.get<boolean>('debug', false)
+  const traceServer = config.get<'off' | 'message' | 'verbose'>('trace.server', 'off')
   const mergeConfig = config.get<boolean>('mergeConfig', false)
   const merge = (a, b) => mergeConfig ? _.merge({}, a, b) : { ...a, ...b };
   // The server is implemented in node
@@ -46,11 +47,13 @@ export function activate(context: ExtensionContext) {
   let serverOptions: ServerOptions = {
     run : {
       module: serverModule,
-      transport: TransportKind.ipc
+      transport: TransportKind.ipc,
+      args: traceServer === 'verbose' ? ['--log-level', '4'] : undefined
     },
     debug: {
       module: serverModule,
-      transport: TransportKind.ipc
+      transport: TransportKind.ipc,
+      args: traceServer === 'verbose' ? ['--log-level', '4'] : undefined
     }
   }
 
