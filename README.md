@@ -64,6 +64,11 @@ example coc-settings.json:
   "default": true,
   "description": "enable this extension?"
 },
+"diagnostic-languageserver.mergeConfig": {
+  "type": "boolean",
+  "default": false,
+  "description": "merge config?"
+},
 "diagnostic-languageserver.debug": {
   "type": "boolean",
   "default": true,
