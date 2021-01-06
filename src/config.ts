@@ -388,6 +388,7 @@ export const linters = {
       "undefined": "warning"
     }
   },
+
   "yamllint": {
     "args": [ "-f", "parsable", "-" ],
     "command": "yamllint",
@@ -426,8 +427,162 @@ export const linters = {
         "message": 2
       }
     ]
-  }
+  },
 
+  "textidote": {
+    "command": "textidote",
+    "debounce": 500,
+    "args": ["--type", "tex", "--check", "en", "--output", "singleline", "--no-color"],
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "textidote",
+    "formatLines": 1,
+    "formatPattern": [
+      "\\(L(\\d+)C(\\d+)-L(\\d+)C(\\d+)\\):(.+)\".+\"$",
+      {
+        "line": 1,
+        "column": 2,
+        "endLine": 3,
+        "endColumn": 4,
+        "message": 5
+      }
+    ],
+  },
+
+  "hlint": {
+    "command": "hlint",
+    "debounce": 100,
+    "args": ["--json", "-"],
+    "sourceName": "hlint",
+    "parseJson": {
+      "line": "startLine",
+      "column": "startColumn",
+      "endLine": "endLine",
+      "endColumn": "endColumn",
+      "message": "${hint}",
+      "security": "severity"
+    },
+    "securities": {
+      "Error": "error",
+      "Warning": "warning",
+      "Suggestion": "info"
+    }
+  },
+
+  "pylint": {
+    "sourceName": "pylint",
+    "command": "pylint",
+    "args": [
+      "--output-format",
+      "text",
+      "--score",
+      "no",
+      "--msg-template",
+      "'{line}:{column}:{category}:{msg} ({msg_id}:{symbol})'",
+      "%file"
+    ],
+    "formatPattern": [
+      "^(\\d+?):(\\d+?):([a-z]+?):(.*)$",
+      {
+        "line": 1,
+        "column": 2,
+        "security": 3,
+        "message": 4
+      }
+    ],
+    "rootPatterns": [".git", "pyproject.toml", "setup.py"],
+    "securities": {
+      "informational": "hint",
+      "refactor": "info",
+      "convention": "info",
+      "warning": "warning",
+      "error": "error",
+      "fatal": "error"
+    },
+    "offsetColumn": 1,
+    "formatLines": 1
+  },
+
+  "mypy": {
+    "sourceName": "mypy",
+    "command": "mypy",
+    "args": [
+      "--no-color-output",
+      "--no-error-summary",
+      "--show-column-numbers",
+      "--follow-imports=silent",
+      "%file"
+    ],
+    "formatPattern": [
+      "^.*:(\\d+?):(\\d+?): ([a-z]+?): (.*)$",
+      {
+        "line": 1,
+        "column": 2,
+        "security": 3,
+        "message": 4
+      }
+    ],
+    "securities": {
+      "error": "error"
+    }
+  },
+
+  "cpplint": {
+    "command": "cpplint",
+    "args": ["%file"],
+    "debounce": 100,
+    "isStderr": true,
+    "isStdout": false,
+    "sourceName": "cpplint",
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "formatPattern": [
+      "^[^:]+:(\\d+):(\\d+)?\\s+([^:]+?)\\s\\[(\\d)\\]$",
+      {
+        "line": 1,
+        "column": 2,
+        "message": 3,
+        "security": 4
+      }
+    ],
+    "securities": {
+      "1": "info",
+      "2": "warning",
+      "3": "warning",
+      "4": "error",
+      "5": "error"
+    }
+  },
+
+  "xo": {
+    "command": "./node_modules/.bin/xo",
+    "rootPatterns": [
+      "package.json",
+      ".git"
+    ],
+    "debounce": 100,
+    "args": [
+      "--reporter",
+      "json",
+      "--stdin",
+      "--stdin-filename",
+      "%filepath"
+    ],
+    "sourceName": "xo",
+    "parseJson": {
+      "errorsRoot": "[0].messages",
+      "line": "line",
+      "column": "column",
+      "endLine": "endLine",
+      "endColumn": "endColumn",
+      "message": "[xo] ${message} [${ruleId}]",
+      "security": "severity"
+    },
+    "securities": {
+      "2": "error",
+      "1": "warning"
+    }
+  }
 }
 
 export const formatters = {
@@ -482,5 +637,35 @@ export const formatters = {
 
   "fish_indent": {
     "command": "fish_indent"
+  },
+
+  "prettier": {
+    "command": "./node_modules/.bin/prettier",
+    "args": ["--stdin", "--stdin-filepath", "%filepath"],
+    "rootPatterns": [
+      ".prettierrc",
+      ".prettierrc.json",
+      ".prettierrc.toml",
+      ".prettierrc.json",
+      ".prettierrc.yml",
+      ".prettierrc.yaml",
+      ".prettierrc.json5",
+      ".prettierrc.js",
+      ".prettierrc.cjs",
+      "prettier.config.js",
+      "prettier.config.cjs"
+    ]
+  },
+
+  "prettier_eslint": {
+    "command": "./node_modules/.bin/prettier-eslint",
+    "args": ["--stdin"],
+    "rootPatterns": [".git"]
+  },
+
+  "xo": {
+    "command": "./node_modules/.bin/xo",
+    "args": ["--fix", "--stdin", "--stdin-filename", "%filepath"],
+    "rootPatterns": ["package.json"]
   }
 }
