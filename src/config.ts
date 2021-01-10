@@ -667,5 +667,26 @@ export const formatters = {
     "command": "./node_modules/.bin/xo",
     "args": ["--fix", "--stdin", "--stdin-filename", "%filepath"],
     "rootPatterns": ["package.json"]
+  },
+
+  "black": {
+    "command": "black",
+    "args": ["--quiet", "-"]
+  },
+
+  "autopep8": {
+    "command": "autopep8",
+    "args": ["-"]
+  },
+
+  "yapf": {
+    "command": "yapf",
+    "args": ["--quiet"]
+  },
+
+  "isort": {
+    "command": "isort",
+    "args": ["--quiet", "-"]
   }
+
 }
