@@ -48,6 +48,7 @@ example coc-settings.json:
     "dart": "dartfmt",
     "elixir": "mix_format",
     "eelixir": "mix_format",
+    "python": ["black", "isort"],
     "lua": "lua-format",
     "sh": "shfmt",
     "blade": "blade-formatter",
