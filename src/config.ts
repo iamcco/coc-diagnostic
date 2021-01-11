@@ -120,11 +120,11 @@ export const linters = {
     "sourceName": "markdownlint",
     "formatLines": 1,
     "formatPattern": [
-      "^.*?:\\s+(\\d+):\\s+(.*)(\\r|\\n)*$",
+      "^.*?:\\s?(\\d+)(:(\\d+)?)?\\s(MD\\d{3}\\/[A-Za-z0-9-/]+)\\s(.*)$",
       {
         "line": 1,
-        "column": -1,
-        "message": 2
+        "column": 3,
+        "message": [4]
       }
     ]
   },
