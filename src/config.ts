@@ -714,6 +714,10 @@ export const formatters = {
   "isort": {
     "command": "isort",
     "args": ["--quiet", "-"]
-  }
+  },
 
+  "gofmt": {
+    "command": "gofmt",
+    "args": ["gofmt", "-s", "%filepath"]
+  }
 }
