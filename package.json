@@ -1,6 +1,6 @@
 {
   "name": "coc-diagnostic",
-  "version": "0.16.0",
+  "version": "0.17.0",
   "description": "diagnostic-languageserver extension for coc.nvim",
   "keywords": [
     "coc.nvim",
