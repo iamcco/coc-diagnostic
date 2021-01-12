@@ -691,6 +691,6 @@ export const formatters = {
 
   "gofmt": {
     "command": "gofmt",
-    "args": ["gofmt", "-s", "%filepath"]
+    "args": ["-s", "%filepath"]
   }
 }
