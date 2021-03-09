@@ -608,8 +608,27 @@ export const linters = {
       "C": "error",
       "N": "error"
     }
-  }
+  },
 
+  "ansibleLint": {
+    "command": "ansible-lint",
+    "args": ["--parseable-severity", "--nocolor", "-"],
+    "sourceName": "ansibleLint",
+    "formatPattern": [
+      "^[^:]+:(\\d+):\\s\\[\\w+\\]\\s\\[(\\w+)\\]\\s(.*)$",
+      {
+        "line": 1,
+        "security": 2,
+        "message": 3
+      }
+    ],
+    "securities": {
+      "VERY_LOW": "hint",
+      "LOW": "info",
+      "HIGH": "warning",
+      "VERY_HIGH": "error"
+    }
+  }
 }
 
 export const formatters = {
@@ -721,3 +740,4 @@ export const formatters = {
     "args": ["-s"]
   }
 }
+
