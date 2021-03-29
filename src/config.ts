@@ -331,7 +331,7 @@ export const linters = {
     "sourceName": "psalm",
     "formatLines": 1,
     "formatPattern": [
-      "^[^:]+:(\\d):(\\d):(.*)\\s-\\s(.*)(\\r|\\n)*$",
+      "^[^:]+:(\\d+):(\\d+):(.*)\\s-\\s(.*)(\\r|\\n)*$",
       {
         "line": 1,
         "column": 2,
