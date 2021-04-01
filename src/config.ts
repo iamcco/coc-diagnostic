@@ -628,6 +628,25 @@ export const linters = {
       "HIGH": "warning",
       "VERY_HIGH": "error"
     }
+  },
+
+  "proselint": {
+    "command": "proselint",
+    "debounce": 300,
+    "args": [ "-j" ],
+    "sourceName": "proselint",
+    "parseJson": {
+      "errorsRoot": "data.errors",
+      "line": "line",
+      "column": "column",
+      "message": "${message}",
+      "security": "severity"
+    },
+    "securities": {
+      "error": "error",
+      "warning": "warning",
+      "info": "suggestion"
+    }
   }
 }
 
