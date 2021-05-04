@@ -472,6 +472,7 @@ export const linters = {
   "pylint": {
     "sourceName": "pylint",
     "command": "pylint",
+    "debounce": 500,
     "args": [
       "--output-format",
       "text",
