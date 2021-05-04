@@ -647,6 +647,38 @@ export const linters = {
       "warning": "warning",
       "info": "suggestion"
     }
+  },
+
+  "luacheck": {
+    "command": "luacheck",
+    "args": [
+      "--formatter",
+      "plain",
+      "--codes",
+      "--ranges",
+      "-"
+    ],
+    "sourceName": "luacheck",
+    "formatPattern": [
+      "^[^:]+:(\\d+):(\\d+)-(\\d+):\\s+\\((\\w)\\d+\\)\\s+(.*)$",
+      {
+        "line": 1,
+        "column": 2,
+        "endLine": 1,
+        "endColumn": 3,
+        "security": 4,
+        "message": 5
+      }
+    ],
+    "rootPatterns": [
+      ".luacheckrc",
+      ".git"
+    ],
+    "debounce": 100,
+    "securities": {
+      "W": "warning",
+      "E": "error"
+    }
   }
 }
 
