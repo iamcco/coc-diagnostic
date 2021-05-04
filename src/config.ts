@@ -593,6 +593,11 @@ export const linters = {
     "command": "flake8",
     "debounce": 100,
     "args": [ "--format=%(row)d,%(col)d,%(code).1s,%(code)s: %(text)s", "-" ],
+    "rootPatterns": [
+      ".flake8",
+      "setup.cfg",
+      "tox.ini"
+    ],
     "offsetLine": 0,
     "offsetColumn": 0,
     "sourceName": "flake8",
