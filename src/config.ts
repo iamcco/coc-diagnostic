@@ -513,6 +513,11 @@ export const linters = {
       "--follow-imports=silent",
       "%file"
     ],
+    "rootPatterns": [
+      "mypy.ini",
+      ".mypy.ini",
+      "setup.cfg"
+    ],
     "formatPattern": [
       "^.*:(\\d+?):(\\d+?): ([a-z]+?): (.*)$",
       {
