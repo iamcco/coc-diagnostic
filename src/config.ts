@@ -667,6 +667,8 @@ export const linters = {
       "plain",
       "--codes",
       "--ranges",
+      "--filename",
+      "%filepath",
       "-"
     ],
     "sourceName": "luacheck",
