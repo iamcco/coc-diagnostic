@@ -325,7 +325,7 @@ export const linters = {
     "command": "./vendor/bin/psalm",
     "debounce": 100,
     "rootPatterns": ["composer.json", "composer.lock", "vendor", ".git"],
-    "args": ["--output-format=emacs", "--no-progress"],
+    "args": ["--output-format=emacs", "--no-progress", "%file"],
     "offsetLine": 0,
     "offsetColumn": 0,
     "sourceName": "psalm",
