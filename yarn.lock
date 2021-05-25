@@ -544,10 +544,10 @@ del@^6.0.0:
     rimraf "^3.0.2"
     slash "^3.0.0"
 
-diagnostic-languageserver@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/diagnostic-languageserver/-/diagnostic-languageserver-1.9.0.tgz#52ce2670cfd46997de92a01d74def57850a27544"
-  integrity sha512-ewhg5DDU+BnqsFAJE7/jMHodXj7ZwpnR10kks+gXfONAAbxpSrqcZtzvO1uLw2B4zTSA7esi/n2wfJX9J9swRA==
+diagnostic-languageserver@^1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/diagnostic-languageserver/-/diagnostic-languageserver-1.10.0.tgz#08fa64b13c2136a178e1e2e2ac0bd0ef628369e6"
+  integrity sha512-EgE39l2toUmPUzew0qaiUon6L1DStIG4SSIHo4tTCwD4yA+ZZqVvSbCynIV1UsEtNDmP4QHLfyZUE9W53mB8rQ==
   dependencies:
     commander "^5.1.0"
     find-up "^4.1.0"
