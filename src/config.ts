@@ -692,7 +692,27 @@ export const linters = {
       "W": "warning",
       "E": "error"
     }
+  },
+
+  "cmakelint": {
+    "command": "cmakelint",
+    "debounce": 100,
+    "args": [
+      "%filepath"
+    ],
+    "offsetLine": 0,
+    "offsetColumn": 1,
+    "sourceName": "cmakelint",
+    "formatLines": 1,
+    "formatPattern": [
+      "^[^:]+:(\\d+): (.*)$",
+      {
+        "line": 1,
+        "message": 2
+      }
+    ]
   }
+
 }
 
 export const formatters = {
