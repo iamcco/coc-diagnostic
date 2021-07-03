@@ -850,6 +850,11 @@ export const formatters = {
   "gofmt": {
     "command": "gofmt",
     "args": ["-s"]
+  },
+
+  "cmake-format": {
+    "command": "cmake-format",
+    "args": ["-i"]
   }
 }
 
