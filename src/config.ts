@@ -711,6 +711,33 @@ export const linters = {
         "message": 2
       }
     ]
+  },
+
+  "cmake-lint": {
+    "command": "cmake-lint",
+    "debounce": 100,
+    "args": [
+      "%filepath"
+    ],
+    "offsetLine": 0,
+    "offsetColumn": 1,
+    "sourceName": "cmakelint",
+    "formatLines": 1,
+    "formatPattern": [
+      "^[^:]+:(\\d+)(,(\\d+))?: (\\[(.).*)$",
+      {
+        "line": 1,
+        "column": 3,
+        "message": 4,
+        "security": 5
+      }
+    ],
+    "securities": {
+      "C": "info",
+      "R": "info",
+      "W": "warning",
+      "E": "error"
+    }
   }
 
 }
