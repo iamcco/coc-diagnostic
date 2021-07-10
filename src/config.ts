@@ -36,11 +36,12 @@ export const linters = {
     "debounce": 100,
     "args": [
       "--format",
-      "json",
+      "json1",
       "-"
     ],
     "sourceName": "shellcheck",
     "parseJson": {
+      "errorsRoot": "comments",
       "line": "line",
       "column": "column",
       "endLine": "endLine",
