@@ -42,6 +42,9 @@ example coc-settings.json:
     "elixir": ["mix_credo", "mix_credo_compile"],
     "eelixir": ["mix_credo", "mix_credo_compile"],
     "php": ["phpstan", "psalm"],
+    "yaml": [ "yamllint" ],
+    "cmake": [ "cmake-lint", "cmakelint" ],
+    "systemd": "systemd-analyze",
     ...
   },
   "diagnostic-languageserver.formatFiletypes": {
@@ -52,6 +55,7 @@ example coc-settings.json:
     "lua": "lua-format",
     "sh": "shfmt",
     "blade": "blade-formatter",
+    "cmake": "cmake-format",
     ...
   }
 }
