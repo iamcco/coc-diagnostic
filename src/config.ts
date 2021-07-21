@@ -738,6 +738,26 @@ export const linters = {
       "W": "warning",
       "E": "error"
     }
+  },
+
+  "systemd-analyze": {
+    "command": "systemd-analyze",
+    "debounce": 100,
+    "args": [
+      "verify",
+      "%filepath"
+    ],
+    "isStdout": false,
+    "isStderr": true,
+    "sourceName": "systemd-analyze",
+    "formatLines": 1,
+    "formatPattern": [
+      "^[^:]+:((\\d+):)?\\s*(.*)$",
+      {
+        "line": 2,
+        "message": 3
+      }
+    ]
   }
 
 }
