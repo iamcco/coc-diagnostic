@@ -44,6 +44,7 @@ example coc-settings.json:
     "php": ["phpstan", "psalm"],
     "yaml": [ "yamllint" ],
     "cmake": [ "cmake-lint", "cmakelint" ],
+    "systemd": "systemd-analyze",
     ...
   },
   "diagnostic-languageserver.formatFiletypes": {
