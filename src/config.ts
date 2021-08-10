@@ -544,7 +544,7 @@ export const linters = {
     "offsetLine": 0,
     "offsetColumn": 0,
     "formatPattern": [
-      "^[^:]+:(\\d+):(\\d+)?\\s+([^:]+?)\\s\\[(\\d)\\]$",
+      "^[^:]+:(\\d+):(\\d+)?\\s+(.+?)\\s\\[(\\d)\\]$",
       {
         "line": 1,
         "column": 2,
