@@ -561,6 +561,43 @@ export const linters = {
     }
   },
 
+  "cppcheck": {
+    "command": "cppcheck",
+    "args": [
+      "--enable=all",
+      "--suppress=missingIncludeSystem",
+      "--addon=cert",
+      "--addon=y2038",
+      "--addon=threadsafety",
+      "--library=googletest",
+      "--inline-suppr",
+      "%file"
+    ],
+    "debounce": 100,
+    "isStderr": true,
+    "isStdout": false,
+    "sourceName": "cppcheck",
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "formatPattern": [
+      "^[^:]+:(\\d+):(\\d+):\\s+([^:]+):\\s+(.+?)$",
+      {
+        "line": 1,
+        "column": 2,
+        "message": 4,
+        "security": 3
+      }
+    ],
+    "securities": {
+      "information": "info",
+      "portability": "warning",
+      "performance": "warning",
+      "style": "warning",
+      "warning": "warning",
+      "error": "error"
+    }
+  },
+
   "xo": {
     "command": "./node_modules/.bin/xo",
     "rootPatterns": [
