@@ -5,7 +5,12 @@ export const linters = {
   "eslint": {
     "command": "./node_modules/.bin/eslint",  // this will find local eslint first, if local eslint not found, it
     "rootPatterns": [
-      ".git"
+      ".eslintrc.js",
+      ".eslintrc.cjs",
+      ".eslintrc.yaml",
+      ".eslintrc.yml",
+      ".eslintrc.json",
+      "package.json"
     ],
     "debounce": 100,
     "args": [
