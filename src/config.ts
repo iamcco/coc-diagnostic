@@ -83,19 +83,25 @@ export const linters = {
   "vint": {
     "command": "vint",
     "debounce": 100,
-    "args": [ "--enable-neovim", "-"],
+    "args": ["-f", "{file_path}:{line_number}:{column_number}: {severity}! {description}", "-"],
     "offsetLine": 0,
     "offsetColumn": 0,
     "sourceName": "vint",
     "formatLines": 1,
     "formatPattern": [
-      "[^:]+:(\\d+):(\\d+):\\s*(.*)(\\r|\\n)*$",
+      "[^:]+:(\\d+):(\\d+):\\s*([^!]*)! (.*)(\\r|\\n)*$",
       {
         "line": 1,
         "column": 2,
-        "message": 3
+        "security": 3,
+        "message": 4
       }
-    ]
+    ],
+    "securities": {
+      "error": "error",
+      "warning": "warning",
+      "style_problem": "info"
+    }
   },
 
   "languagetool": {
