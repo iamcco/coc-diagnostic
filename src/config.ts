@@ -80,6 +80,72 @@ export const linters = {
     ]
   },
 
+  "alex": {
+    "command": "sh",
+    "debounce": 100,
+    "args": ["-c", "alexjs %file 2>&1"],
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "alex",
+    "formatLines": 1,
+    "formatPattern": [
+      "(\\d+):(\\d+)-\\d+:\\d+\\s*(\\S*)\\s*(.*)(\\r|\\n)*$",
+      {
+        "line": 1,
+        "column": 2,
+        "security": 3,
+        "message": 4
+      }
+    ],
+    "securities": {
+      "warning": "warning"
+    }
+  },
+
+  "alex-text": {
+    "command": "sh",
+    "debounce": 100,
+    "args": ["-c", "alexjs -t %file 2>&1"],
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "alex",
+    "formatLines": 1,
+    "formatPattern": [
+      "(\\d+):(\\d+)-\\d+:\\d+\\s*(\\S*)\\s*(.*)(\\r|\\n)*$",
+      {
+        "line": 1,
+        "column": 2,
+        "security": 3,
+        "message": 4
+      }
+    ],
+    "securities": {
+      "warning": "warning"
+    }
+  },
+
+  "alex-html": {
+    "command": "sh",
+    "debounce": 100,
+    "args": ["-c", "alexjs -l %file 2>&1"],
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "alex",
+    "formatLines": 1,
+    "formatPattern": [
+      "(\\d+):(\\d+)-\\d+:\\d+\\s*(\\S*)\\s*(.*)(\\r|\\n)*$",
+      {
+        "line": 1,
+        "column": 2,
+        "security": 3,
+        "message": 4
+      }
+    ],
+    "securities": {
+      "warning": "warning"
+    }
+  },
+
   "vint": {
     "command": "vint",
     "debounce": 100,
