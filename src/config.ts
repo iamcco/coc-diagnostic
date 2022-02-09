@@ -839,7 +839,7 @@ export const formatters = {
 
   "shfmt": {
     "command": "shfmt",
-    "args": ["-i", "2", "-filename", "%filepath"]
+    "args": ["-filename", "%filepath"]
   },
 
   "tffmt": {
