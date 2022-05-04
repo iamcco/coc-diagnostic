@@ -875,6 +875,24 @@ export const linters = {
     ]
   }
 
+  "protolint": {
+    "command": "protolint",
+    "debounce": 100,
+    "args": [ "-reporter", "json", "%filepath" ],
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "protolint",
+    "formatLines": 1,
+    "isStderr": true,
+    "isStdout": false,
+    "parseJson": {
+      "errorsRoot": "lints",
+      "line": "line",
+      "column": "column",
+      "message": "${message} [${rule}]"
+    }
+  }
+
 }
 
 export const formatters = {
