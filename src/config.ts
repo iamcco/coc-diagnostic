@@ -476,7 +476,7 @@ export const linters = {
       "^.*?:(\\d+):(\\d+): \\[(.*?)] (.*) \\((.*)\\)",
       {
         "line": 1,
-        "endline": 1,
+        "endLine": 1,
         "column": 2,
         "endColumn": 2,
         "message": 4,
@@ -873,7 +873,7 @@ export const linters = {
         "message": 3
       }
     ]
-  }
+  },
 
   "protolint": {
     "command": "protolint",
