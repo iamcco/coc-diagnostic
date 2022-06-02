@@ -552,23 +552,19 @@ export const linters = {
     "command": "pylint",
     "debounce": 500,
     "args": [
-      "--output-format",
-      "text",
-      "--score",
-      "no",
-      "--msg-template",
-      "'{line}:{column}:{category}:{msg} ({msg_id}:{symbol})'",
-      "%file"
+      "-f",
+      "json",
+      "--from-stdin",
+      "%filename"
     ],
-    "formatPattern": [
-      "^(\\d+?):(\\d+?):([a-z]+?):(.*)$",
-      {
-        "line": 1,
-        "column": 2,
-        "security": 3,
-        "message": 4
-      }
-    ],
+    "parseJson": {
+      "line": "line",
+      "column": "column",
+      "endLine": "endLine",
+      "endColumn": "endColumn",
+      "message": "${message-id}: ${message} (${symbol})",
+      "security": "type"
+    },
     "rootPatterns": [".git", "pyproject.toml", "setup.py"],
     "securities": {
       "informational": "hint",
@@ -579,7 +575,6 @@ export const linters = {
       "fatal": "error"
     },
     "offsetColumn": 1,
-    "formatLines": 1
   },
 
   "mypy": {
