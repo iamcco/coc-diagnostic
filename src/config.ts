@@ -206,6 +206,24 @@ export const linters = {
     }
   },
 
+  "pip-compile": {
+    "command": "sh",
+    "args": ["-c", "pip-compile -n %file 2>&1"],
+    "debounce": 100,
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "pip-compile",
+    "formatLines": 1,
+    "formatPattern": [
+      "(Could not find a version that matches \\S+) \\(from -r ([^(]+) \\(line (\\d+)\\)\\)",
+      {
+        "message": 1,
+        "errorsRoot": 2,
+        "line": 3
+      }
+    ]
+  },
+
   "languagetool": {
     "command": "languagetool",
     "debounce": 200,
