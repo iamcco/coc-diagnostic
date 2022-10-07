@@ -62,6 +62,25 @@ export const linters = {
     }
   },
 
+  "syntest": {
+    "command": "syntest",
+    "args": ["%file", "."],
+    "debounce": 100,
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "syntest",
+    "formatLines": 1,
+    "formatPattern": [
+      "Assertion selector \"[^\"]+\" from line (\\d+) failed against line \\d+, column range (\\d+)-(\\d+) \\(with text \"[^\"]+\"\\) has scope \\[([^\\]]+)\\]",
+      {
+        "line": 1,
+        "column": 2,
+        "endColumn": 3,
+        "message": 4
+      }
+    ]
+  },
+
   "write-good": {
     "command": "write-good",
     "debounce": 100,
