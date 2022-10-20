@@ -209,7 +209,7 @@ export const linters = {
   "languagetool": {
     "command": "languagetool",
     "debounce": 200,
-    "args": ["-"],
+    "args": ["%file"],
     "offsetLine": 0,
     "offsetColumn": 0,
     "sourceName": "languagetool",
