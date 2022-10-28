@@ -164,6 +164,24 @@ export const linters = {
     }
   },
 
+  "jq": {
+    "command": "sh",
+    "args": ["-c", "jq -f %file /dev/null 2>&1"],
+    "debounce": 100,
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "jq",
+    "formatLines": 1,
+    "formatPattern": [
+      "^jq: (error): syntax error, (.*) at <.*>, line (\\d+):$",
+      {
+        "security": 1,
+        "message": 2,
+        "line": 3
+      }
+    ]
+  },
+
   "vint": {
     "command": "vint",
     "debounce": 100,
