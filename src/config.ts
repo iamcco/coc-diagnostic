@@ -81,6 +81,26 @@ export const linters = {
     ]
   },
 
+  "lacheck": {
+    "command": "lacheck",
+    "args": ["%file"],
+    "debounce": 100,
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "lacheck",
+    "formatLines": 1,
+    "formatPattern": [
+      "\"[^\"]+\", line (\\d+):\\s*(.*)(\\r|\\n)*$",
+      {
+        "line": 1,
+        "message": 2
+      }
+    ],
+    "securities": {
+      "undefined": "warning"
+    }
+  },
+
   "write-good": {
     "command": "write-good",
     "debounce": 100,
@@ -165,6 +185,24 @@ export const linters = {
     }
   },
 
+  "jq": {
+    "command": "sh",
+    "args": ["-c", "jq -f %file /dev/null 2>&1"],
+    "debounce": 100,
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "jq",
+    "formatLines": 1,
+    "formatPattern": [
+      "^jq: (error): syntax error, (.*) at <.*>, line (\\d+):$",
+      {
+        "security": 1,
+        "message": 2,
+        "line": 3
+      }
+    ]
+  },
+
   "vint": {
     "command": "vint",
     "debounce": 100,
@@ -189,10 +227,28 @@ export const linters = {
     }
   },
 
+  "pip-compile": {
+    "command": "sh",
+    "args": ["-c", "pip-compile -n %file 2>&1"],
+    "debounce": 100,
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "pip-compile",
+    "formatLines": 1,
+    "formatPattern": [
+      "(Could not find a version that matches \\S+) \\(from -r ([^(]+) \\(line (\\d+)\\)\\)",
+      {
+        "message": 1,
+        "errorsRoot": 2,
+        "line": 3
+      }
+    ]
+  },
+
   "languagetool": {
     "command": "languagetool",
     "debounce": 200,
-    "args": ["-"],
+    "args": ["%file"],
     "offsetLine": 0,
     "offsetColumn": 0,
     "sourceName": "languagetool",
