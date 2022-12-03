@@ -122,7 +122,7 @@ export const linters = {
   "alex": {
     "command": "sh",
     "debounce": 100,
-    "args": ["-c", "alexjs %file 2>&1"],
+    "args": ["-c", "alex %file 2>&1"],
     "offsetLine": 0,
     "offsetColumn": 0,
     "sourceName": "alex",
