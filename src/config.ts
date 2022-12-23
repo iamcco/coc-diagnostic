@@ -961,8 +961,26 @@ export const linters = {
       "column": "column",
       "message": "${message} [${rule}]"
     }
-  }
+  },
 
+  "zsh": {
+    "args": ["-n", "%file"],
+    "command": "zsh",
+    "isStderr": true,
+    "isStdout": false,
+    "debounce": 100,
+    "formatLines": 1,
+    "formatPattern": [
+      "^.*:(\\d+): (parse error near .*)$",
+      {
+        "line": 1,
+        "message": 2
+      }
+    ],
+    "offsetColumn": 0,
+    "offsetLine": 0,
+    "sourceName": "zsh"
+  }
 }
 
 export const formatters = {
