@@ -355,6 +355,30 @@ export const linters = {
     }
   },
 
+  "perl": {
+    "args": ["-w", "%file"],
+    "command": "perl",
+    "isStderr": true,
+    "isStdout": false,
+    "debounce": 100,
+    "formatLines": 1,
+    "formatPattern": [
+      "^(.*) at .* line (\\d+)(.)(.*)$",
+      {
+        "message": [1, 4],
+        "line": 2,
+        "security": "3"
+      }
+    ],
+    "securities": {
+      ",": "error",
+      ".": "warning"
+    },
+    "offsetColumn": 0,
+    "offsetLine": 0,
+    "sourceName": "perl"
+  },
+
   "stylelint": {
     "command": "./node_modules/.bin/stylelint",
     "rootPatterns": [
