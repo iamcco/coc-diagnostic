@@ -120,9 +120,11 @@ export const linters = {
   },
 
   "alex": {
-    "command": "sh",
+    "command": "alex",
     "debounce": 100,
-    "args": ["-c", "alex %file 2>&1"],
+    "args": ["%file"],
+    "isStdout": false,
+    "isStderr": true,
     "offsetLine": 0,
     "offsetColumn": 0,
     "sourceName": "alex",
@@ -142,9 +144,11 @@ export const linters = {
   },
 
   "alex-text": {
-    "command": "sh",
+    "command": "alex",
     "debounce": 100,
-    "args": ["-c", "alexjs -t %file 2>&1"],
+    "args": ["-t", "%file"],
+    "isStdout": false,
+    "isStderr": true,
     "offsetLine": 0,
     "offsetColumn": 0,
     "sourceName": "alex",
@@ -164,9 +168,11 @@ export const linters = {
   },
 
   "alex-html": {
-    "command": "sh",
+    "command": "alex",
     "debounce": 100,
-    "args": ["-c", "alexjs -l %file 2>&1"],
+    "args": ["-l", "%file"],
+    "isStdout": false,
+    "isStderr": true,
     "offsetLine": 0,
     "offsetColumn": 0,
     "sourceName": "alex",
@@ -186,8 +192,10 @@ export const linters = {
   },
 
   "jq": {
-    "command": "sh",
-    "args": ["-c", "jq -f %file /dev/null 2>&1"],
+    "command": "jq",
+    "args": ["-nf", "%file"],
+    "isStdout": false,
+    "isStderr": true,
     "debounce": 100,
     "offsetLine": 0,
     "offsetColumn": 0,
@@ -228,8 +236,10 @@ export const linters = {
   },
 
   "pip-compile": {
-    "command": "sh",
-    "args": ["-c", "pip-compile -n %file 2>&1"],
+    "command": "pip-compile",
+    "args": ["-n", "%file"],
+    "isStdout": false,
+    "isStderr": true,
     "debounce": 100,
     "offsetLine": 0,
     "offsetColumn": 0,
