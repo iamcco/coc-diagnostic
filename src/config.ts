@@ -997,6 +997,25 @@ export const linters = {
     }
   },
 
+  "bash": {
+    "args": ["-n", "%file"],
+    "command": "bash",
+    "isStderr": true,
+    "isStdout": false,
+    "debounce": 100,
+    "formatLines": 1,
+    "formatPattern": [
+      "^.*: line (\\d+): (syntax error near unexpected token .*)$",
+      {
+        "line": 1,
+        "message": 2
+      }
+    ],
+    "offsetColumn": 0,
+    "offsetLine": 0,
+    "sourceName": "bash"
+  },
+
   "zsh": {
     "args": ["-n", "%file"],
     "command": "zsh",
