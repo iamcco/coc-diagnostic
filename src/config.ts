@@ -62,6 +62,26 @@ export const linters = {
     }
   },
 
+  "shfmt": {
+    "command": "shfmt",
+    "args": ["-w", "%file"],
+    "isStdout": false,
+    "isStderr": true,
+    "debounce": 100,
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "shfmt",
+    "formatLines": 1,
+    "formatPattern": [
+      ".*?:(\\d+):(\\d+): (.*)",
+      {
+        "line": 1,
+        "column": 2,
+        "message": 3
+      }
+    ]
+  },
+
   "syntest": {
     "command": "syntest",
     "args": ["%file", "."],
