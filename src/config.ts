@@ -1111,6 +1111,10 @@ export const formatters = {
     "command": "fish_indent"
   },
 
+  "perltidy": {
+    "command": "perltidy"
+  },
+
   "prettier": {
     "command": "./node_modules/.bin/prettier",
     "args": ["--stdin", "--stdin-filepath", "%filepath"],
