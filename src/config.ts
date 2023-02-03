@@ -1165,6 +1165,11 @@ export const formatters = {
     "args": ["--quiet", "-"]
   },
 
+  "jq": {
+    "command": "jq",
+    "args": ["-S", "."]
+  },
+
   "gofmt": {
     "command": "gofmt",
     "args": ["-s"]
