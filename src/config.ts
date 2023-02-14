@@ -234,13 +234,13 @@ export const linters = {
   "vint": {
     "command": "vint",
     "debounce": 100,
-    "args": ["-f", "{file_path}:{line_number}:{column_number}: {severity}! {description}", "-"],
+    "args": ["-f", "{line_number}:{column_number}: {severity}! {description}", "%file"],
     "offsetLine": 0,
     "offsetColumn": 0,
     "sourceName": "vint",
     "formatLines": 1,
     "formatPattern": [
-      "[^:]+:(\\d+):(\\d+):\\s*([^!]*)! (.*)(\\r|\\n)*$",
+      "(\\d+):(\\d+):\\s*([^!]*)! (.*)(\\r|\\n)*$",
       {
         "line": 1,
         "column": 2,
