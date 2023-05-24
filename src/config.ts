@@ -620,6 +620,20 @@ export const linters = {
     "sourceName": "yamllint"
   },
 
+  "actionlint": {
+    "command": "actionlint",
+    "args": ["-oneline"],
+    "sourceName": "actionlint",
+    "formatPattern": [
+      "^.*?:(\\d+):(\\d+): (.*)",
+      {
+        "line": 1,
+        "column": 2,
+        "message": 3
+      }
+    ]
+  },
+
   "fish": {
     "command": "fish",
     "args": ["-n", "%file"],
