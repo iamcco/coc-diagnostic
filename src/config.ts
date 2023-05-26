@@ -1178,6 +1178,10 @@ export const formatters = {
   "nixpkgs-fmt": {
     "command": "nixpkgs-fmt",
   },
+  
+  "iStyle": {
+    "command": "iStyle",
+  },
 
   "cmake-format": {
     "command": "cmake-format",
