@@ -64,3 +64,4 @@ typings/
 
 lib/
 out/
+.DS_Store
