@@ -1206,6 +1206,13 @@ export const formatters = {
     "args": ["-S", "."]
   },
 
+  "php-cs-fixer": {
+    "command": "./vendor/bin/php-cs-fixer",
+    "args": ["fix", "--using-cache=no", "--no-interaction", "%file"],
+    "isStdout": false,
+    "doesWriteToFile": true,
+  },
+
   "gofmt": {
     "command": "gofmt",
     "args": ["-s"]
