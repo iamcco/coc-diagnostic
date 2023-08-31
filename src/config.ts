@@ -15,6 +15,7 @@ export const linters = {
         "message": 3
       }
     ],
+    "offsetColumnEnd": 1,
     "sourceName": "actionlint"
   },
   "alex": {
@@ -33,6 +34,7 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
+    "offsetColumnEnd": 1,
     "securities": {
       "warning": "warning"
     },
@@ -55,6 +57,7 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
+    "offsetColumnEnd": 1,
     "securities": {
       "warning": "warning"
     },
@@ -77,6 +80,7 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
+    "offsetColumnEnd": 1,
     "securities": {
       "warning": "warning"
     },
@@ -97,6 +101,7 @@ export const linters = {
         "security": 2
       }
     ],
+    "offsetColumnEnd": 1,
     "securities": {
       "HIGH": "warning",
       "LOW": "info",
@@ -120,6 +125,7 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
+    "offsetColumnEnd": 1,
     "sourceName": "bash"
   },
   "cmake-lint": {
@@ -137,6 +143,7 @@ export const linters = {
       }
     ],
     "offsetColumn": 1,
+    "offsetColumnEnd": 1,
     "securities": {
       "C": "info",
       "E": "error",
@@ -158,6 +165,7 @@ export const linters = {
       }
     ],
     "offsetColumn": 1,
+    "offsetColumnEnd": 1,
     "sourceName": "cmakelint"
   },
   "cppcheck": {
@@ -183,6 +191,7 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
+    "offsetColumnEnd": 1,
     "securities": {
       "error": "error",
       "information": "info",
@@ -209,6 +218,7 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
+    "offsetColumnEnd": 1,
     "securities": {
       "1": "info",
       "2": "warning",
@@ -265,6 +275,7 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
+    "offsetColumnEnd": 1,
     "sourceName": "fish"
   },
   "flake8": {
@@ -282,6 +293,7 @@ export const linters = {
         "security": 3
       }
     ],
+    "offsetColumnEnd": 1,
     "rootPatterns": [
       ".flake8",
       "setup.cfg",
@@ -303,6 +315,7 @@ export const linters = {
       "json"
     ],
     "command": "golangci-lint",
+    "offsetColumnEnd": 1,
     "parseJson": {
       "column": "Pos.Column",
       "errorsRoot": "Issues",
@@ -324,6 +337,7 @@ export const linters = {
       "-"
     ],
     "command": "hadolint",
+    "offsetColumnEnd": 1,
     "parseJson": {
       "column": "column",
       "line": "line",
@@ -375,6 +389,7 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
+    "offsetColumnEnd": 1,
     "sourceName": "jq"
   },
   "lacheck": {
@@ -389,6 +404,7 @@ export const linters = {
         "message": 2
       }
     ],
+    "offsetColumnEnd": 1,
     "securities": {
       "undefined": "warning"
     },
@@ -412,6 +428,7 @@ export const linters = {
         ]
       }
     ],
+    "offsetColumnEnd": 1,
     "sourceName": "languagetool"
   },
   "luacheck": {
@@ -462,6 +479,7 @@ export const linters = {
       }
     ],
     "isStderr": true,
+    "offsetColumnEnd": 1,
     "sourceName": "markdownlint"
   },
   "mix_credo": {
@@ -482,6 +500,7 @@ export const linters = {
         "security": 4
       }
     ],
+    "offsetColumnEnd": 1,
     "rootPatterns": [
       "mix.exs"
     ],
@@ -518,6 +537,7 @@ export const linters = {
         "security": 1
       }
     ],
+    "offsetColumnEnd": 1,
     "offsetLine": -1,
     "rootPatterns": [
       "mix.exs"
@@ -545,6 +565,7 @@ export const linters = {
         "security": 3
       }
     ],
+    "offsetColumnEnd": 1,
     "rootPatterns": [
       "mypy.ini",
       ".mypy.ini",
@@ -568,6 +589,7 @@ export const linters = {
         "security": 2
       }
     ],
+    "offsetColumnEnd": 1,
     "securities": {
       "E": "error",
       "W": "warning"
@@ -607,6 +629,7 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
+    "offsetColumnEnd": 1,
     "securities": {
       ",": "error",
       ".": "warning"
@@ -630,6 +653,7 @@ export const linters = {
         "security": 3
       }
     ],
+    "offsetColumnEnd": 1,
     "rootPatterns": [
       "composer.json",
       "composer.lock",
@@ -658,6 +682,7 @@ export const linters = {
         "message": 2
       }
     ],
+    "offsetColumnEnd": 1,
     "rootPatterns": [
       "composer.json",
       "composer.lock",
@@ -682,6 +707,7 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
+    "offsetColumnEnd": 1,
     "sourceName": "pip-compile"
   },
   "proselint": {
@@ -690,6 +716,7 @@ export const linters = {
     ],
     "command": "proselint",
     "debounce": 300,
+    "offsetColumnEnd": 1,
     "parseJson": {
       "column": "column",
       "errorsRoot": "data.errors",
@@ -713,6 +740,7 @@ export const linters = {
     "command": "protolint",
     "isStderr": true,
     "isStdout": false,
+    "offsetColumnEnd": 1,
     "parseJson": {
       "column": "column",
       "errorsRoot": "lints",
@@ -737,6 +765,7 @@ export const linters = {
         "security": 3
       }
     ],
+    "offsetColumnEnd": 1,
     "requiredFiles": [
       "psalm.xml"
     ],
@@ -800,6 +829,7 @@ export const linters = {
         ]
       }
     ],
+    "offsetColumnEnd": 1,
     "rootPatterns": [
       ".git",
       "go.mod"
@@ -846,6 +876,7 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
+    "offsetColumnEnd": 1,
     "sourceName": "shfmt"
   },
   "standard": {
@@ -862,6 +893,7 @@ export const linters = {
         "message": 3
       }
     ],
+    "offsetColumnEnd": 1,
     "rootPatterns": [
       ".git"
     ],
@@ -875,6 +907,7 @@ export const linters = {
       "%filepath"
     ],
     "command": "./node_modules/.bin/stylelint",
+    "offsetColumnEnd": 1,
     "parseJson": {
       "column": "column",
       "errorsRoot": "[0].warnings",
@@ -923,6 +956,7 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
+    "offsetColumnEnd": 1,
     "sourceName": "systemd-analyze"
   },
   "textidote": {
@@ -994,6 +1028,7 @@ export const linters = {
         "security": 3
       }
     ],
+    "offsetColumnEnd": 1,
     "securities": {
       "error": "error",
       "style_problem": "info",
@@ -1015,6 +1050,7 @@ export const linters = {
       }
     ],
     "offsetColumn": 1,
+    "offsetColumnEnd": 1,
     "sourceName": "write-good"
   },
   "xo": {
@@ -1085,6 +1121,7 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
+    "offsetColumnEnd": 1,
     "sourceName": "zsh"
   }
 }
