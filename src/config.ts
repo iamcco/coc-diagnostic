@@ -22,8 +22,6 @@ export const linters = {
       "%file"
     ],
     "command": "alex",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "(\\d+):(\\d+)-\\d+:\\d+\\s*(\\S*)\\s*(.*)(\\r|\\n)*$",
       {
@@ -35,8 +33,6 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "securities": {
       "warning": "warning"
     },
@@ -48,8 +44,6 @@ export const linters = {
       "%file"
     ],
     "command": "alex",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "(\\d+):(\\d+)-\\d+:\\d+\\s*(\\S*)\\s*(.*)(\\r|\\n)*$",
       {
@@ -61,8 +55,6 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "securities": {
       "warning": "warning"
     },
@@ -74,8 +66,6 @@ export const linters = {
       "%file"
     ],
     "command": "alex",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "(\\d+):(\\d+)-\\d+:\\d+\\s*(\\S*)\\s*(.*)(\\r|\\n)*$",
       {
@@ -87,8 +77,6 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "securities": {
       "warning": "warning"
     },
@@ -123,8 +111,6 @@ export const linters = {
       "%file"
     ],
     "command": "bash",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^.*: line (\\d+): (syntax error near unexpected token .*)$",
       {
@@ -134,8 +120,6 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "sourceName": "bash"
   },
   "cmake-lint": {
@@ -143,8 +127,6 @@ export const linters = {
       "%filepath"
     ],
     "command": "cmake-lint",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^[^:]+:(\\d+)(,(\\d+))?: (\\[(.).*)$",
       {
@@ -155,7 +137,6 @@ export const linters = {
       }
     ],
     "offsetColumn": 1,
-    "offsetLine": 0,
     "securities": {
       "C": "info",
       "E": "error",
@@ -169,8 +150,6 @@ export const linters = {
       "%filepath"
     ],
     "command": "cmakelint",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^[^:]+:(\\d+): (.*)$",
       {
@@ -179,7 +158,6 @@ export const linters = {
       }
     ],
     "offsetColumn": 1,
-    "offsetLine": 0,
     "sourceName": "cmakelint"
   },
   "cppcheck": {
@@ -194,7 +172,6 @@ export const linters = {
       "%file"
     ],
     "command": "cppcheck",
-    "debounce": 100,
     "formatPattern": [
       "^[^:]+:([1-9]\\d*):(\\d+):\\s+([^:]+):\\s+(.+?)$",
       {
@@ -206,8 +183,6 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "securities": {
       "error": "error",
       "information": "info",
@@ -223,7 +198,6 @@ export const linters = {
       "%file"
     ],
     "command": "cpplint",
-    "debounce": 100,
     "formatPattern": [
       "^[^:]+:(\\d+):(\\d+)?\\s+(.+?)\\s\\[(\\d)\\]$",
       {
@@ -235,8 +209,6 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "securities": {
       "1": "info",
       "2": "warning",
@@ -255,7 +227,6 @@ export const linters = {
       "json"
     ],
     "command": "./node_modules/.bin/eslint",
-    "debounce": 100,
     "parseJson": {
       "column": "column",
       "endColumn": "endColumn",
@@ -285,7 +256,6 @@ export const linters = {
       "%file"
     ],
     "command": "fish",
-    "formatLines": 1,
     "formatPattern": [
       "^.*\\(line (\\d+)\\): (.*)$",
       {
@@ -303,8 +273,6 @@ export const linters = {
       "-"
     ],
     "command": "flake8",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "(\\d+),(\\d+),([A-Z]),(.*)(\\r|\\n)*$",
       {
@@ -314,8 +282,6 @@ export const linters = {
         "security": 3
       }
     ],
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "rootPatterns": [
       ".flake8",
       "setup.cfg",
@@ -337,7 +303,6 @@ export const linters = {
       "json"
     ],
     "command": "golangci-lint",
-    "debounce": 100,
     "parseJson": {
       "column": "Pos.Column",
       "errorsRoot": "Issues",
@@ -379,7 +344,6 @@ export const linters = {
       "-"
     ],
     "command": "hlint",
-    "debounce": 100,
     "parseJson": {
       "column": "startColumn",
       "endColumn": "endColumn",
@@ -401,8 +365,6 @@ export const linters = {
       "%file"
     ],
     "command": "jq",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^jq: (error): syntax error, (.*) at <.*>, line (\\d+):$",
       {
@@ -413,8 +375,6 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "sourceName": "jq"
   },
   "lacheck": {
@@ -422,8 +382,6 @@ export const linters = {
       "%file"
     ],
     "command": "lacheck",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "\"[^\"]+\", line (\\d+):\\s*(.*)(\\r|\\n)*$",
       {
@@ -431,8 +389,6 @@ export const linters = {
         "message": 2
       }
     ],
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "securities": {
       "undefined": "warning"
     },
@@ -456,8 +412,6 @@ export const linters = {
         ]
       }
     ],
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "sourceName": "languagetool"
   },
   "luacheck": {
@@ -471,7 +425,6 @@ export const linters = {
       "-"
     ],
     "command": "luacheck",
-    "debounce": 100,
     "formatPattern": [
       "^[^:]+:(\\d+):(\\d+)-(\\d+):\\s+\\((\\w)\\d+\\)\\s+(.*)$",
       {
@@ -498,8 +451,6 @@ export const linters = {
       "--stdin"
     ],
     "command": "markdownlint",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^.*?:\\s?(\\d+)(:(\\d+)?)?\\s(MD\\d{3}\\/[A-Za-z0-9-/]+)\\s(.*)$",
       {
@@ -511,8 +462,6 @@ export const linters = {
       }
     ],
     "isStderr": true,
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "sourceName": "markdownlint"
   },
   "mix_credo": {
@@ -524,8 +473,6 @@ export const linters = {
       "--read-from-stdin"
     ],
     "command": "mix",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^[^ ]+?:([0-9]+)(:([0-9]+))?:\\s+([^ ]+):\\s+(.*)(\\r|\\n)*$",
       {
@@ -535,8 +482,6 @@ export const linters = {
         "security": 4
       }
     ],
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "rootPatterns": [
       "mix.exs"
     ],
@@ -557,8 +502,6 @@ export const linters = {
       "--read-from-stdin"
     ],
     "command": "mix",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^([^ ]+)\\s+\\(([^)]+)\\)\\s+([^ ]+?):([0-9]+):\\s+(.*)(\\r|\\n)*$",
       {
@@ -575,7 +518,6 @@ export const linters = {
         "security": 1
       }
     ],
-    "offsetColumn": 0,
     "offsetLine": -1,
     "rootPatterns": [
       "mix.exs"
@@ -618,8 +560,6 @@ export const linters = {
       "%file"
     ],
     "command": "nagelfar",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "Line\\s+(\\d+): (.) (.*)",
       {
@@ -628,8 +568,6 @@ export const linters = {
         "security": 2
       }
     ],
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "securities": {
       "E": "error",
       "W": "warning"
@@ -638,7 +576,6 @@ export const linters = {
   },
   "nix-linter": {
     "command": "nix-linter",
-    "debounce": 100,
     "parseJson": {
       "column": "pos.spanBegin.sourceColumn",
       "endColumn": "pos.spanEnd.sourceColumn",
@@ -657,8 +594,6 @@ export const linters = {
       "%file"
     ],
     "command": "perl",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^(.*) at .* line (\\d+)(.)(.*)$",
       {
@@ -672,8 +607,6 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "securities": {
       ",": "error",
       ".": "warning"
@@ -688,8 +621,6 @@ export const linters = {
       "-"
     ],
     "command": "./vendor/bin/phpcs",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^.*:(\\d+):(\\d+):\\s+(.*)\\s+-\\s+(.*)(\\r|\\n)*$",
       {
@@ -699,8 +630,6 @@ export const linters = {
         "security": 3
       }
     ],
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "rootPatterns": [
       "composer.json",
       "composer.lock",
@@ -722,8 +651,6 @@ export const linters = {
       "%file"
     ],
     "command": "./vendor/bin/phpstan",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^[^:]+:(\\d+):(.*)(\\r|\\n)*$",
       {
@@ -731,8 +658,6 @@ export const linters = {
         "message": 2
       }
     ],
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "rootPatterns": [
       "composer.json",
       "composer.lock",
@@ -747,8 +672,6 @@ export const linters = {
       "%file"
     ],
     "command": "pip-compile",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "(Could not find a version that matches \\S+) \\(from -r ([^(]+) \\(line (\\d+)\\)\\)",
       {
@@ -759,8 +682,6 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "sourceName": "pip-compile"
   },
   "proselint": {
@@ -790,12 +711,8 @@ export const linters = {
       "%filepath"
     ],
     "command": "protolint",
-    "debounce": 100,
-    "formatLines": 1,
     "isStderr": true,
     "isStdout": false,
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "parseJson": {
       "column": "column",
       "errorsRoot": "lints",
@@ -811,8 +728,6 @@ export const linters = {
       "%file"
     ],
     "command": "./vendor/bin/psalm",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^[^:]+:(\\d+):(\\d+):(.*)\\s-\\s(.*)(\\r|\\n)*$",
       {
@@ -822,8 +737,6 @@ export const linters = {
         "security": 3
       }
     ],
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "requiredFiles": [
       "psalm.xml"
     ],
@@ -877,7 +790,6 @@ export const linters = {
       "%file"
     ],
     "command": "revive",
-    "debounce": 100,
     "formatPattern": [
       "^[^:]+:(\\d+):(\\d+):\\s+(.*)$",
       {
@@ -901,7 +813,6 @@ export const linters = {
       "-"
     ],
     "command": "shellcheck",
-    "debounce": 100,
     "parseJson": {
       "column": "column",
       "endColumn": "endColumn",
@@ -925,8 +836,6 @@ export const linters = {
       "%file"
     ],
     "command": "shfmt",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       ".*?:(\\d+):(\\d+): (.*)",
       {
@@ -937,8 +846,6 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "sourceName": "shfmt"
   },
   "standard": {
@@ -947,8 +854,6 @@ export const linters = {
       "--verbose"
     ],
     "command": "./node_modules/.bin/standard",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^\\s*<\\w+>:(\\d+):(\\d+):\\s+(.*)(\\r|\\n)*$",
       {
@@ -957,10 +862,6 @@ export const linters = {
         "message": 3
       }
     ],
-    "isStderr": false,
-    "isStdout": true,
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "rootPatterns": [
       ".git"
     ],
@@ -974,7 +875,6 @@ export const linters = {
       "%filepath"
     ],
     "command": "./node_modules/.bin/stylelint",
-    "debounce": 100,
     "parseJson": {
       "column": "column",
       "errorsRoot": "[0].warnings",
@@ -997,8 +897,6 @@ export const linters = {
       "."
     ],
     "command": "syntest",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "Assertion selector \"[^\"]+\" from line (\\d+) failed against line \\d+, column range (\\d+)-(\\d+) \\(with text \"[^\"]+\"\\) has scope \\[([^\\]]+)\\]",
       {
@@ -1008,8 +906,6 @@ export const linters = {
         "message": 4
       }
     ],
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "sourceName": "syntest"
   },
   "systemd-analyze": {
@@ -1018,8 +914,6 @@ export const linters = {
       "%filepath"
     ],
     "command": "systemd-analyze",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^[^:]+:((\\d+):)?\\s*(.*)$",
       {
@@ -1043,7 +937,6 @@ export const linters = {
     ],
     "command": "textidote",
     "debounce": 500,
-    "formatLines": 1,
     "formatPattern": [
       "\\(L(\\d+)C(\\d+)-L(\\d+)C(\\d+)\\):(.+)\".+\"$",
       {
@@ -1054,8 +947,6 @@ export const linters = {
         "message": 5
       }
     ],
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "sourceName": "textidote"
   },
   "tidy": {
@@ -1064,8 +955,6 @@ export const linters = {
       "-q"
     ],
     "command": "tidy",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^.*?(\\d+).*?(\\d+)\\s+-\\s+([^:]+):\\s+(.*)(\\r|\\n)*$",
       {
@@ -1080,8 +969,6 @@ export const linters = {
       }
     ],
     "isStderr": true,
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "rootPatterns": [
       ".git/"
     ],
@@ -1098,8 +985,6 @@ export const linters = {
       "-"
     ],
     "command": "vint",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "[^:]+:(\\d+):(\\d+):\\s*([^!]*)! (.*)(\\r|\\n)*$",
       {
@@ -1109,8 +994,6 @@ export const linters = {
         "security": 3
       }
     ],
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "securities": {
       "error": "error",
       "style_problem": "info",
@@ -1123,8 +1006,6 @@ export const linters = {
       "--text=%text"
     ],
     "command": "write-good",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "(.*)\\s+on\\s+line\\s+(\\d+)\\s+at\\s+column\\s+(\\d+)\\s*$",
       {
@@ -1134,7 +1015,6 @@ export const linters = {
       }
     ],
     "offsetColumn": 1,
-    "offsetLine": 0,
     "sourceName": "write-good"
   },
   "xo": {
@@ -1146,7 +1026,6 @@ export const linters = {
       "%filepath"
     ],
     "command": "./node_modules/.bin/xo",
-    "debounce": 100,
     "parseJson": {
       "column": "column",
       "endColumn": "endColumn",
@@ -1173,8 +1052,6 @@ export const linters = {
       "-"
     ],
     "command": "yamllint",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^.*?:(\\d+):(\\d+): \\[(.*?)] (.*) \\((.*)\\)",
       {
@@ -1199,8 +1076,6 @@ export const linters = {
       "%file"
     ],
     "command": "zsh",
-    "debounce": 100,
-    "formatLines": 1,
     "formatPattern": [
       "^.*:(\\d+): (parse error near .*)$",
       {
@@ -1210,8 +1085,6 @@ export const linters = {
     ],
     "isStderr": true,
     "isStdout": false,
-    "offsetColumn": 0,
-    "offsetLine": 0,
     "sourceName": "zsh"
   }
 }
@@ -1350,8 +1223,6 @@ export const formatters = {
       "--fix"
     ],
     "command": "./node_modules/.bin/standard",
-    "isStderr": false,
-    "isStdout": true,
     "rootPatterns": [
       ".git"
     ]
@@ -1361,8 +1232,6 @@ export const formatters = {
       "--fix"
     ],
     "command": "./node_modules/.bin/stylelint",
-    "isStderr": false,
-    "isStdout": true,
     "rootPatterns": [
       ".git"
     ]
