@@ -312,6 +312,28 @@ export const linters = {
     ]
   },
 
+  "nagelfar": {
+    "command": "nagelfar",
+    "args": ["%file"],
+    "debounce": 100,
+    "offsetLine": 0,
+    "offsetColumn": 0,
+    "sourceName": "nagelfar",
+    "formatLines": 1,
+    "formatPattern": [
+      "Line\\s+(\\d+): (.) (.*)",
+      {
+        "line": 1,
+        "security": 2,
+        "message": 3
+      }
+    ],
+    "securities": {
+      "E": "error",
+      "W": "warning"
+    }
+  },
+
   "phpcs": {
     "command": "./vendor/bin/phpcs",
     "debounce": 100,
