@@ -117,6 +117,7 @@ Some coc extensions/language servers also use some linters/formatters.
 So if you use them, you can skip some config of this project.
 
 - [alex](https://github.com/get-alex/alex):
+  [alex-server](https://www.npmjs.com/package/alex-server),
   [coc-alex](https://www.npmjs.com/package/coc-alex)
 - [write-good](https://github.com/btford/write-good):
   [write-good-linter](https://www.npmjs.com/package/write-good-linter)
