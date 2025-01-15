@@ -111,6 +111,69 @@ example coc-settings.json:
 }
 ```
 
+### Related Projects
+
+Some coc extensions/language servers also use some linters/formatters.
+So if you use them, you can skip some config of this project.
+
+- [alex](https://github.com/get-alex/alex):
+  [coc-alex](https://www.npmjs.com/package/coc-alex)
+- [write-good](https://github.com/btford/write-good):
+  [write-good-linter](https://www.npmjs.com/package/write-good-linter)
+- [languagetool](https://languagetool.org/):
+  [coc-ltex](https://www.npmjs.com/package/coc-ltex)
+- [latexindent](https://github.com/cmhughes/latexindent.pl):
+  [coc-texlab](https://github.com/fannheyward/coc-texlab)
+- [perltidy](https://github.com/perltidy/perltidy):
+  [Perl-LanguageServer](https://github.com/richterger/Perl-LanguageServer),
+  [PerlNavigator](https://github.com/bscan/PerlNavigator),
+  [coc-perl](https://github.com/perl-ide/coc-perl)
+- [shellcheck](https://github.com/koalaman/shellcheck),
+  [shfmt](https://github.com/patrickvane/shfmt):
+  [coc-sh](https://github.com/josa42/coc-sh)
+- [vint](https://github.com/Vimjas/vint):
+  [vim-language-server](https://github.com/iamcco/vim-language-server),
+  [coc-vimlsp](https://github.com/iamcco/coc-vimlsp).
+  wait [this PR](https://github.com/iamcco/vim-language-server/pull/99)
+- [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli):
+  [coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)
+- [prettier](https://prettier.io/):
+  [coc-prettier](https://github.com/neoclide/coc-prettier)
+- [biome](https://github.com/biomejs/biome):
+  `biome lsp-proxy`, [coc-biome](https://github.com/fannheyward/coc-biome)
+- [ruff](https://github.com/astral-sh/ruff):
+  `ruff server`, [coc-ruff](https://github.com/yaegassy/coc-ruff)
+- sort (ruff, pyright, isort),
+  linter (bandit, flake8, mypy, ruff, prospector, pycodestyle, pydocstyle,
+  pyflakes, pylama, pylint, pytype),
+  formatter (ruff, yapf, black, autopep8, darker, blackd, pyink):
+  [coc-pyright](https://github.com/fannheyward/coc-pyright)
+- [py-doq](https://github.com/heavenshell/py-doq):
+  [coc-pydocstring](https://github.com/yaegassy/coc-pydocstring)
+- [typstyle](https://github.com/Enter-tainer/typstyle),
+  [typstfmt](https://github.com/astrale-sharp/typstfmt):
+  [tinymist](https://github.com/Myriad-Dreamin/tinymist)
+- [clang-format](https://clang.llvm.org/docs/ClangFormat.html):
+  [clangd](https://github.com/clangd/clangd),
+  [coc-clangd](https://github.com/clangd/coc-clangd)
+- [nixfmt](https://github.com/NixOS/nixfmt):
+  [nixd](https://github.com/nix-community/nixd),
+  [coc-nix](https://www.npmjs.com/package/coc-nix)
+- [rubocop](https://rubygems.org/gems/rubocop):
+  [ruby-lsp](https://github.com/Shopify/ruby-lsp),
+  [solargraph](https://github.com/castwide/solargraph)
+- [cmake_format](https://github.com/cheshirekow/cmake_format):
+  [cmake-language-server](https://github.com/regen100/cmake-language-server),
+  [coc-cmake](https://www.npmjs.com/package/coc-cmake)
+- `neocmakelsp format`:
+  [neocmakelsp](https://github.com/Decodetalkers/neocmakelsp),
+  [coc-cmake](https://www.npmjs.com/package/coc-cmake)
+- `muon analyze`, `muon fmt`:
+  [mesonlsp](https://github.com/JCWasmx86/mesonlsp),
+  [coc-meson](https://www.npmjs.com/package/coc-meson)
+- [oelint-adv](https://github.com/priv-kweihmann/oelint-adv):
+  [bitbake-language-server](https://github.com/Freed-Wu/bitbake-language-server)
+
 ### Buy Me A Coffee ☕️
 
 ![btc](https://img.shields.io/keybase/btc/iamcco.svg?style=popout-square)
